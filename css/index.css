@@ -64,37 +64,40 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 
 .side-bar-container {
+  margin: 0 auto;
   display: flex;
+  max-width: 1200px;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
 }
 .side-bar-container .sidebar-container {
   visibility: hidden;
-  max-width: 300px;
+  width: 300px;
   transform: translateX(-100%);
   background: linear-gradient(rgb(54, 54, 245), rgb(0, 0, 0));
   height: 100vh;
   position: absolute;
   z-index: 999;
-  top: 45px;
-  padding: 10px 5px;
+  top: 60px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   border-radius: 0px 20px 20px 0px;
   transition: 0.5s ease-in-out;
 }
 .side-bar-container .sidebar-container .top {
   width: 100%;
-  height: 400px;
-}
-.side-bar-container .sidebar-container .top .image-holder {
-  width: 100%;
-  height: 100%;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.side-bar-container .sidebar-container .top .image-holder {
+  padding-top: 30px;
+  width: 80%;
+  height: 100%;
 }
 .side-bar-container .sidebar-container .top .image-holder p {
   position: absolute;
@@ -107,8 +110,8 @@ body .menuOnscroll.active .top-nav.active ul li a {
   color: white;
 }
 .side-bar-container .sidebar-container .top .image-holder img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 .side-bar-container .sidebar-container .name {
@@ -116,20 +119,21 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .sidebar-container .name h1 {
   width: 100%;
-  font-size: 16px;
+  font-size: 25px;
   color: white;
 }
 .side-bar-container .sidebar-container .name p {
-  text-align: left;
-  font-size: 12px;
+  text-indent: 20px;
+  font-size: 15px;
   font-weight: 600;
   color: rgb(7, 240, 182);
+  text-align: left;
 }
 .side-bar-container .sidebar-container .addressInfo {
   color: white;
 }
 .side-bar-container .sidebar-container .addressInfo h1 {
-  font-size: 16px;
+  font-size: 25px;
   padding-bottom: 5px;
 }
 .side-bar-container .sidebar-container .addressInfo p {
@@ -141,7 +145,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   color: white;
 }
 .side-bar-container .sidebar-container .skilss h1 {
-  font-size: 16px;
+  font-size: 25px;
   padding-bottom: 5px;
   color: white;
 }
@@ -151,7 +155,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   font-weight: 600;
 }
 .side-bar-container .sidebar-container .credentials h1 {
-  font-size: 16px;
+  font-size: 25px;
   padding-bottom: 5px;
   color: white;
 }
@@ -166,7 +170,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   flex-direction: column;
 }
 .side-bar-container .sidebar-container .onlineAccount h1 {
-  font-size: 16px;
+  font-size: 25px;
   padding-bottom: 5px;
 }
 .side-bar-container .sidebar-container .onlineAccount p {
@@ -183,7 +187,6 @@ body .menuOnscroll.active .top-nav.active ul li a {
   display: flex;
   flex-direction: column;
   min-width: 355px;
-  min-height: 100vh;
   position: relative;
 }
 .side-bar-container .container header {
@@ -232,7 +235,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   opacity: 0;
   width: 100%;
   position: absolute;
-  top: 60px;
+  top: 45px;
   height: 0px;
   left: 0;
   padding: 10px 20px;
@@ -352,9 +355,10 @@ body .menuOnscroll.active .top-nav.active ul li a {
   text-align: center;
 }
 .side-bar-container .container .section-holder .offers-container .front-page p {
-  text-indent: 10px;
+  text-indent: 4px;
   line-height: 2rem;
   padding: 25px 10px;
+  text-align: left;
   position: relative;
 }
 .side-bar-container .container .section-holder .offers-container .front-page p span {
@@ -548,7 +552,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   width: 100%;
   height: 100vh;
   background-color: rgb(34, 36, 37);
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .side-bar-container .container #project h1 {
   text-align: center;
@@ -578,7 +582,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   justify-content: center;
 }
 .side-bar-container .container #project .videos-container .videos-sample {
-  width: 100%;
+  width: 400px;
   height: 160px;
   position: relative;
 }

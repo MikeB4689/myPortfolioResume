@@ -94,7 +94,9 @@ body {
 //sibar-contaner
 
 .side-bar-container {
+    margin: 0 auto;
     display: flex;
+    max-width: 1200px;
     min-height: 100vh;
     overflow: hidden;
     position: relative;
@@ -103,31 +105,32 @@ body {
 
         visibility: hidden;
 
-        max-width: 300px;
+        width: 300px;
         transform: translateX(-100%);
         background: linear-gradient(rgb(54, 54, 245, ), rgba(0, 0, 0, ));
         height: 100vh;
         position: absolute;
         z-index: 999;
-        top: 45px;
-        padding: 10px 5px;
+        top: 60px;
+        padding: 0px 20px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         border-radius: 0px 20px 20px 0px;
         transition: .5s ease-in-out;
 
         .top {
             width: 100%;
-            height: 400px;
-
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .image-holder {
-                width: 100%;
+                padding-top: 30px;
+                width: 80%;
                 height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+
 
 
                 p {
@@ -146,8 +149,8 @@ body {
 
                 img {
 
-                    width: 100px;
-                    height: 100px;
+                    width: 100%;
+                    height: 100%;
                     border-radius: 50%;
                 }
             }
@@ -161,17 +164,19 @@ body {
 
             h1 {
                 width: 100%;
-                font-size: 16px;
+                font-size: 25px;
                 color: white;
 
             }
 
             p {
-                text-align: left;
 
-                font-size: 12px;
+                text-indent: 20px;
+                font-size: 15px;
                 font-weight: 600;
                 color: rgb(7, 240, 182);
+                text-align: left;
+
 
             }
         }
@@ -181,7 +186,7 @@ body {
             color: white;
 
             h1 {
-                font-size: 16px;
+                font-size: 25px;
                 padding-bottom: 5px;
             }
 
@@ -200,7 +205,7 @@ body {
 
             h1 {
 
-                font-size: 16px;
+                font-size: 25px;
                 padding-bottom: 5px;
                 color: white;
             }
@@ -219,7 +224,7 @@ body {
         .credentials {
             h1 {
 
-                font-size: 16px;
+                font-size: 25px;
                 padding-bottom: 5px;
                 color: white;
             }
@@ -244,7 +249,7 @@ body {
 
 
             h1 {
-                font-size: 16px;
+                font-size: 25px;
                 padding-bottom: 5px;
             }
 
@@ -268,7 +273,7 @@ body {
         display: flex;
         flex-direction: column;
         min-width: 355px;
-        min-height: 100vh;
+
         position: relative;
 
         header {
@@ -323,7 +328,7 @@ body {
                 opacity: 0;
                 width: 100%;
                 position: absolute;
-                top: 60px;
+                top: 45px;
                 height: 0px;
                 left: 0;
                 padding: 10px 20px;
@@ -500,10 +505,10 @@ body {
                     }
 
                     p {
-                        text-indent: 10px;
+                        text-indent: 4px;
                         line-height: 2rem;
                         padding: 25px 10px;
-
+                        text-align: left;
                         position: relative;
 
                         span {
@@ -777,7 +782,7 @@ body {
             width: 100%;
             height: 100vh;
             background-color: rgb(34, 36, 37);
-            padding: 0 10px;
+            padding: 0 20px;
 
 
 
@@ -818,7 +823,7 @@ body {
 
                 .videos-sample {
 
-                    width: 100%;
+                    width: 400px;
                     height: 160px;
                     position: relative;
 
