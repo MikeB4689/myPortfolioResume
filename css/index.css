@@ -79,7 +79,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   height: 100vh;
   position: absolute;
   z-index: 999;
-  top: 60px;
+  top: 50px;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
@@ -284,7 +284,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   transition: 0.9s ease;
 }
 .side-bar-container .container header .nav-icon p i {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
 }
@@ -473,13 +473,12 @@ body .menuOnscroll.active .top-nav.active ul li a {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
+  padding: 0 20px;
 }
 .side-bar-container .container #abutme .about-content .about-section {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 90%;
-  height: 180px;
+  height: 230px;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -575,15 +574,16 @@ body .menuOnscroll.active .top-nav.active ul li a {
   left: 2;
 }
 .side-bar-container .container #project .videos-container {
-  width: 100%;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
 }
 .side-bar-container .container #project .videos-container .videos-sample {
-  width: 400px;
-  height: 160px;
+  width: 100%;
+  height: 200px;
   position: relative;
 }
 .side-bar-container .container #project .videos-container .videos-sample p {
