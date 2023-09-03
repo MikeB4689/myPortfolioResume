@@ -47,10 +47,12 @@
                 #abutme {
                     .about-content {
                         gap: 10px;
+                        display: grid;
+                        grid-template-rows: repeat(3, 1fr);
 
                         .about-section {
-                            width: 80%;
-                            height: 200px;
+                            width: 400px;
+                            height: 160px;
 
                             .read-icon {
                                 padding: 5px 0px 0px 0px;
@@ -90,20 +92,17 @@
                 }
 
                 #project {
-                    padding: 50px 0 20px;
+                    padding: 10px 0 20px;
 
                     .videos-container {
 
                         width: 100%;
-                        display: grid;
-                        grid-template-rows: repeat(3, 1fr);
-                        padding: 0 40px;
-                        gap: 10px;
+                        gap: 20px;
 
 
                         .videos-sample {
-                            min-width: 150px;
-                            height: 200px;
+                            width: 390px;
+                            height: 150px;
 
 
 
@@ -214,10 +213,10 @@
 
                 #abutme {
 
-                    padding: 40px 20px 0px 20px;
+                    padding: 10px 20px 0px 20px;
 
                     h1 {
-                        font-size: 45px;
+                        font-size: 35px;
                     }
 
                     h1::after {
@@ -288,7 +287,7 @@
                 }
 
                 #project {
-                    padding: 50px 20px 0px 20px;
+                    padding: 0 20px;
 
                     .videos-container {
 
@@ -296,17 +295,18 @@
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         padding: 0 20px;
-                        gap: 10px;
+                        align-items: center;
+                        gap: 20px;
 
 
                         .videos-sample {
-                            min-width: 200px;
-                            height: 250px;
 
+                            width: 100%;
 
 
 
                             video {
+
                                 width: 100%;
                                 height: 100%;
                             }
@@ -447,6 +447,7 @@
 
                         .about-section {
                             width: 100%;
+                            max-height: 240px;
 
 
 
@@ -506,14 +507,17 @@
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         padding: 0 20px;
-                        gap: 10px;
+                        gap: 20px;
 
 
                         .videos-sample {
+
                             min-width: 200px;
-                            height: 100%;
+                            height: 200px;
 
-
+                            p {
+                                font-size: 13px;
+                            }
 
 
                             video {
@@ -650,11 +654,11 @@
 
                         .front-page {
                             h1 {
-                                font-size: 60px;
+                                font-size: 40px;
                             }
 
                             h3 {
-                                font-size: 35px;
+                                font-size: 25px;
                                 word-spacing: 10px;
                                 padding: 10px 10px;
                             }
@@ -687,19 +691,19 @@
                 }
 
                 #abutme {
-                    padding: 60px 20px 0px 20px;
-                    gap: 40px;
+                    padding: 30px 20px 0px 20px;
+                    gap: 20px;
 
                     h1 {
-                        font-size: 60px;
+                        font-size: 40px;
                     }
 
                     h1::after {
-                        width: 300px;
+                        width: 200px;
                     }
 
                     h1::before {
-                        width: 300px;
+                        width: 200px;
                     }
 
                     .about-content {
@@ -710,8 +714,10 @@
                         padding: 0 10px;
 
                         .about-section {
+
+
                             width: 100%;
-                            height: 300px;
+                            height: 230px;
 
 
 
@@ -725,7 +731,7 @@
                             }
 
                             .readmore {
-                                padding: 60px 40px;
+                                padding: 30px 40px;
                                 font-size: 16px;
                                 line-height: 20px;
                             }
@@ -769,24 +775,25 @@
                 }
 
                 #project {
+                    height: 100vh;
 
-                    padding: 60px 20px 0px 20px;
+                    padding: 20px 20px 0px 20px;
 
-                    gap: 40px;
+                    gap: 10px;
 
                     h1 {
                         width: 700px;
-                        font-size: 50px;
+                        font-size: 40px;
                     }
 
                     h1::after {
-                        width: 390px;
-                        left: 155px
+                        width: 300px;
+                        left: 200px
                     }
 
                     h1::before {
-                        width: 390px;
-
+                        width: 300px;
+                        left: 200px
                     }
 
                     .videos-container {
@@ -799,8 +806,8 @@
 
 
                         .videos-sample {
-                            min-width: 200px;
-                            height: 300px;
+                            max-width: 500px;
+                            height: 200px;
 
 
 

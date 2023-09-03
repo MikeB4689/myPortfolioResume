@@ -29,6 +29,7 @@ body {
             display: flex;
             align-items: center;
 
+
             i {
                 font-size: 30px;
             }
@@ -65,14 +66,15 @@ body {
                 display: flex;
                 gap: 10px;
                 transform: scaleX(-1);
-                padding-left: 30px;
+                padding-left: 0px;
+                align-items: center;
 
                 li {
                     list-style: none;
 
                     a {
 
-                        font-size: 13px;
+                        font-size: 12px;
                         color: white;
                         font-weight: 400;
                         text-decoration: none;
@@ -100,14 +102,14 @@ body {
     .sidebar-container {
 
         visibility: hidden;
-        flex-shrink: 0;
-        width: 50%;
+
+        max-width: 300px;
         transform: translateX(-100%);
         background: linear-gradient(rgb(54, 54, 245, ), rgba(0, 0, 0, ));
         height: 100vh;
         position: absolute;
         z-index: 999;
-        top: 60px;
+        top: 45px;
         padding: 10px 5px;
         display: flex;
         flex-direction: column;
@@ -180,7 +182,7 @@ body {
 
             h1 {
                 font-size: 16px;
-                padding-bottom: 10px;
+                padding-bottom: 5px;
             }
 
             p {
@@ -199,7 +201,7 @@ body {
             h1 {
 
                 font-size: 16px;
-                padding-bottom: 10px;
+                padding-bottom: 5px;
                 color: white;
             }
 
@@ -218,7 +220,7 @@ body {
             h1 {
 
                 font-size: 16px;
-                padding-bottom: 10px;
+                padding-bottom: 5px;
                 color: white;
             }
 
@@ -265,7 +267,7 @@ body {
     .container {
         display: flex;
         flex-direction: column;
-        min-width: 400px;
+        min-width: 355px;
         min-height: 100vh;
         position: relative;
 
@@ -285,6 +287,8 @@ body {
                     display: flex;
                     align-items: center;
                     gap: 2px;
+                    font-size: 20px;
+                    position: relative;
 
                     i {
                         transition: .5s ease;
@@ -294,6 +298,23 @@ body {
                         color: green;
                     }
 
+                }
+
+                h1::before {
+                    content: "click arrow";
+                    background-color: red;
+                    width: 60px;
+                    height: 10px;
+                    font-size: 10px;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 2;
+                    right: -60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    padding: 2px
                 }
             }
 
@@ -379,7 +400,7 @@ body {
 
 
                     i {
-                        font-size: 40px;
+                        font-size: 20px;
                         color: white;
                         cursor: pointer;
 
@@ -405,7 +426,7 @@ body {
             height: 100vh;
             display: flex;
             flex-direction: column;
-            padding: 40px 0;
+            padding: 20px 0;
             align-items: center;
             background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
 
@@ -431,7 +452,7 @@ body {
                 display: flex;
                 overflow: hidden;
                 inset: 0;
-
+                padding: 0;
                 width: 90%;
 
                 .front-page {
@@ -464,14 +485,14 @@ body {
 
 
                     h1 {
-                        font-size: 25px;
+                        font-size: 20px;
                         width: 100%;
                         text-align: center;
                         padding-top: 20px;
                     }
 
                     h3 {
-                        font-size: 20px;
+                        font-size: 16px;
                         word-spacing: -2px;
                         padding: 10px 20px;
                         text-transform: uppercase;
@@ -479,16 +500,16 @@ body {
                     }
 
                     p {
-                        text-indent: 40px;
+                        text-indent: 10px;
                         line-height: 2rem;
-                        padding: 40px 30px;
+                        padding: 25px 10px;
 
                         position: relative;
 
                         span {
 
 
-                            font-size: 4rem;
+                            font-size: 3rem;
                             height: 4rem;
                             font-weight: 900;
                             padding: 0 20px;
@@ -586,10 +607,10 @@ body {
 
         //about section
         #abutme {
-            padding-top: 50px;
+            padding-top: 10px;
             background-color: rgb(34, 29, 29);
             width: 100%;
-            height: 100vh;
+            height: 110vh;
             display: flex;
             flex-direction: column;
             padding-bottom: 20px;
@@ -599,7 +620,7 @@ body {
                 display: flex;
                 justify-content: center;
                 width: 300px;
-                font-size: 35px;
+                font-size: 25px;
                 padding: 20px 0;
                 color: white;
                 position: relative;
@@ -637,17 +658,17 @@ body {
 
             .about-content {
                 z-index: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
 
+                gap: 10px;
 
                 .about-section {
                     display: flex;
                     flex-direction: column;
                     margin: 0 auto;
                     width: 90%;
-                    height: 200px;
+                    height: 180px;
                     border-radius: 10px;
                     position: relative;
                     overflow: hidden;
@@ -655,12 +676,12 @@ body {
                     h2 {
                         width: 100%;
                         text-align: center;
-                        padding: 12px 0;
+                        padding: 10px 0;
                         color: white;
                         text-transform: uppercase;
                         font-weight: 800;
                         z-index: 1;
-                        font-size: 20px;
+                        font-size: 16px;
 
                         i {
                             color: green;
@@ -681,7 +702,7 @@ body {
 
                         background: linear-gradient(rgb(54, 54, 245, ), rgba(0, 0, 0, .25));
                         z-index: 1;
-                        height: 20px;
+                        height: 15px;
                         overflow: hidden;
                         font-size: 12px;
                         line-height: 15px;
@@ -710,8 +731,8 @@ body {
 
                             color: white;
                             text-align: center;
-                            font-size: 16px;
-                            padding-top: 10px;
+                            font-size: 15px;
+                            padding-top: 5px;
                             font-weight: 200;
 
                         }
@@ -753,40 +774,25 @@ body {
         }
 
         #project {
-            padding-top: 50px;
             width: 100%;
             height: 100vh;
-
-
             background-color: rgb(34, 36, 37);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 0 10px;
+
+
 
             h1 {
 
                 text-align: center;
-                width: 300px;
-                font-size: 30px;
-                padding: 20px 0;
+                width: 100%;
+                font-size: 25px;
+                padding: 10px;
                 color: white;
                 text-align: center;
                 position: relative;
+                margin-bottom: 20px;
 
 
-            }
-
-            h1::after {
-                content: "";
-
-
-                position: absolute;
-                width: 250px;
-                height: 5px;
-                background-color: cadetblue;
-                bottom: 10px;
-                border-radius: 5px;
-                left: 35px;
             }
 
             h1::before {
@@ -794,37 +800,33 @@ body {
 
 
                 position: absolute;
-                width: 250px;
+                width: 200px;
                 height: 5px;
                 background-color: cadetblue;
+                bottom: 0;
                 border-radius: 5px;
-                top: 10px;
-                left: 20;
-
+                left: 2;
             }
 
-            .videos-container {
 
+            .videos-container {
+                width: 100%;
                 display: grid;
                 grid-template-rows: repeat(3, 1fr);
                 gap: 10px;
-
-
-
-
-
+                justify-content: center;
 
                 .videos-sample {
 
                     width: 100%;
-                    height: 200px;
+                    height: 160px;
                     position: relative;
 
 
 
                     p {
                         top: 0;
-                        font-size: 16px;
+                        font-size: 12px;
                         width: 100%;
                         color: white;
                         background-color: red;
@@ -836,10 +838,11 @@ body {
 
                     video {
 
+
                         object-fit: cover;
-                        border-radius: 20px;
                         width: 100%;
                         height: 100%;
+                        border-radius: 15px;
 
 
 
@@ -853,7 +856,7 @@ body {
         }
 
         #contact {
-            padding-top: 50px;
+            padding-top: 20px;
 
             width: 100%;
             height: 100vh;
@@ -866,7 +869,7 @@ body {
                 display: flex;
                 justify-content: center;
                 width: 400px;
-                font-size: 40px;
+                font-size: 25px;
                 padding: 20px 0;
                 color: white;
                 position: relative;
@@ -875,7 +878,7 @@ body {
             h1::after {
                 content: "";
                 position: absolute;
-                width: 300px;
+                width: 200px;
                 height: 5px;
                 background-color: cadetblue;
                 bottom: 10px;
@@ -887,7 +890,7 @@ body {
             h1::before {
                 content: "";
                 position: absolute;
-                width: 300px;
+                width: 200px;
                 height: 5px;
                 background-color: cadetblue;
                 border-radius: 5px;

@@ -50,13 +50,14 @@ body .menuOnscroll.active .top-nav.active ul {
   display: flex;
   gap: 10px;
   transform: scaleX(-1);
-  padding-left: 30px;
+  padding-left: 0px;
+  align-items: center;
 }
 body .menuOnscroll.active .top-nav.active ul li {
   list-style: none;
 }
 body .menuOnscroll.active .top-nav.active ul li a {
-  font-size: 13px;
+  font-size: 12px;
   color: white;
   font-weight: 400;
   text-decoration: none;
@@ -70,14 +71,13 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .sidebar-container {
   visibility: hidden;
-  flex-shrink: 0;
-  width: 50%;
+  max-width: 300px;
   transform: translateX(-100%);
   background: linear-gradient(rgb(54, 54, 245), rgb(0, 0, 0));
   height: 100vh;
   position: absolute;
   z-index: 999;
-  top: 60px;
+  top: 45px;
   padding: 10px 5px;
   display: flex;
   flex-direction: column;
@@ -130,7 +130,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .sidebar-container .addressInfo h1 {
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .side-bar-container .sidebar-container .addressInfo p {
   font-size: 12px;
@@ -142,7 +142,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .sidebar-container .skilss h1 {
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: white;
 }
 .side-bar-container .sidebar-container .skilss p {
@@ -152,7 +152,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .sidebar-container .credentials h1 {
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: white;
 }
 .side-bar-container .sidebar-container .credentials p a {
@@ -182,7 +182,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container {
   display: flex;
   flex-direction: column;
-  min-width: 400px;
+  min-width: 355px;
   min-height: 100vh;
   position: relative;
 }
@@ -202,12 +202,30 @@ body .menuOnscroll.active .top-nav.active ul li a {
   display: flex;
   align-items: center;
   gap: 2px;
+  font-size: 20px;
+  position: relative;
 }
 .side-bar-container .container header .top-header h1 i {
   transition: 0.5s ease;
 }
 .side-bar-container .container header .top-header h1 i:hover {
   color: green;
+}
+.side-bar-container .container header .top-header h1::before {
+  content: "click arrow";
+  background-color: red;
+  width: 60px;
+  height: 10px;
+  font-size: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 2;
+  right: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 2px;
 }
 .side-bar-container .container header .navBar {
   background-color: white;
@@ -263,7 +281,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   transition: 0.9s ease;
 }
 .side-bar-container .container header .nav-icon p i {
-  font-size: 40px;
+  font-size: 20px;
   color: white;
   cursor: pointer;
 }
@@ -277,7 +295,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 40px 0;
+  padding: 20px 0;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
 }
@@ -295,6 +313,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   display: flex;
   overflow: hidden;
   inset: 0;
+  padding: 0;
   width: 90%;
 }
 .side-bar-container .container .section-holder .offers-container .front-page {
@@ -320,26 +339,26 @@ body .menuOnscroll.active .top-nav.active ul li a {
   position: relative;
 }
 .side-bar-container .container .section-holder .offers-container .front-page h1 {
-  font-size: 25px;
+  font-size: 20px;
   width: 100%;
   text-align: center;
   padding-top: 20px;
 }
 .side-bar-container .container .section-holder .offers-container .front-page h3 {
-  font-size: 20px;
+  font-size: 16px;
   word-spacing: -2px;
   padding: 10px 20px;
   text-transform: uppercase;
   text-align: center;
 }
 .side-bar-container .container .section-holder .offers-container .front-page p {
-  text-indent: 40px;
+  text-indent: 10px;
   line-height: 2rem;
-  padding: 40px 30px;
+  padding: 25px 10px;
   position: relative;
 }
 .side-bar-container .container .section-holder .offers-container .front-page p span {
-  font-size: 4rem;
+  font-size: 3rem;
   height: 4rem;
   font-weight: 900;
   padding: 0 20px;
@@ -407,10 +426,10 @@ body .menuOnscroll.active .top-nav.active ul li a {
   text-decoration: none;
 }
 .side-bar-container .container #abutme {
-  padding-top: 50px;
+  padding-top: 10px;
   background-color: rgb(34, 29, 29);
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
@@ -420,7 +439,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   display: flex;
   justify-content: center;
   width: 300px;
-  font-size: 35px;
+  font-size: 25px;
   padding: 20px 0;
   color: white;
   position: relative;
@@ -447,8 +466,8 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .container #abutme .about-content {
   z-index: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   gap: 10px;
 }
 .side-bar-container .container #abutme .about-content .about-section {
@@ -456,7 +475,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   flex-direction: column;
   margin: 0 auto;
   width: 90%;
-  height: 200px;
+  height: 180px;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -464,12 +483,12 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container #abutme .about-content .about-section h2 {
   width: 100%;
   text-align: center;
-  padding: 12px 0;
+  padding: 10px 0;
   color: white;
   text-transform: uppercase;
   font-weight: 800;
   z-index: 1;
-  font-size: 20px;
+  font-size: 16px;
 }
 .side-bar-container .container #abutme .about-content .about-section h2 i {
   color: green;
@@ -484,7 +503,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container #abutme .about-content .about-section .readmore {
   background: linear-gradient(rgb(54, 54, 245), rgba(0, 0, 0, 0.25));
   z-index: 1;
-  height: 20px;
+  height: 15px;
   overflow: hidden;
   font-size: 12px;
   line-height: 15px;
@@ -507,8 +526,8 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container #abutme .about-content .about-section .read-icon span {
   color: white;
   text-align: center;
-  font-size: 16px;
-  padding-top: 10px;
+  font-size: 15px;
+  padding-top: 5px;
   font-weight: 200;
 }
 .side-bar-container .container #abutme .about-content .about-section .read-icon p i {
@@ -526,56 +545,46 @@ body .menuOnscroll.active .top-nav.active ul li a {
   height: 100%;
 }
 .side-bar-container .container #project {
-  padding-top: 50px;
   width: 100%;
   height: 100vh;
   background-color: rgb(34, 36, 37);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 10px;
 }
 .side-bar-container .container #project h1 {
   text-align: center;
-  width: 300px;
-  font-size: 30px;
-  padding: 20px 0;
+  width: 100%;
+  font-size: 25px;
+  padding: 10px;
   color: white;
   text-align: center;
   position: relative;
-}
-.side-bar-container .container #project h1::after {
-  content: "";
-  position: absolute;
-  width: 250px;
-  height: 5px;
-  background-color: cadetblue;
-  bottom: 10px;
-  border-radius: 5px;
-  left: 35px;
+  margin-bottom: 20px;
 }
 .side-bar-container .container #project h1::before {
   content: "";
   position: absolute;
-  width: 250px;
+  width: 200px;
   height: 5px;
   background-color: cadetblue;
+  bottom: 0;
   border-radius: 5px;
-  top: 10px;
-  left: 20;
+  left: 2;
 }
 .side-bar-container .container #project .videos-container {
+  width: 100%;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
+  justify-content: center;
 }
 .side-bar-container .container #project .videos-container .videos-sample {
   width: 100%;
-  height: 200px;
+  height: 160px;
   position: relative;
 }
 .side-bar-container .container #project .videos-container .videos-sample p {
   top: 0;
-  font-size: 16px;
+  font-size: 12px;
   width: 100%;
   color: white;
   background-color: red;
@@ -587,12 +596,12 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container #project .videos-container .videos-sample video {
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
   width: 100%;
   height: 100%;
+  border-radius: 15px;
 }
 .side-bar-container .container #contact {
-  padding-top: 50px;
+  padding-top: 20px;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -604,7 +613,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
   display: flex;
   justify-content: center;
   width: 400px;
-  font-size: 40px;
+  font-size: 25px;
   padding: 20px 0;
   color: white;
   position: relative;
@@ -612,7 +621,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container #contact h1::after {
   content: "";
   position: absolute;
-  width: 300px;
+  width: 200px;
   height: 5px;
   background-color: cadetblue;
   bottom: 10px;
@@ -622,7 +631,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container #contact h1::before {
   content: "";
   position: absolute;
-  width: 300px;
+  width: 200px;
   height: 5px;
   background-color: cadetblue;
   border-radius: 5px;

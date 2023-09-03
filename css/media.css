@@ -28,10 +28,12 @@
   }
   body .side-bar-container .container #abutme .about-content {
     gap: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
   }
   body .side-bar-container .container #abutme .about-content .about-section {
-    width: 80%;
-    height: 200px;
+    width: 400px;
+    height: 160px;
   }
   body .side-bar-container .container #abutme .about-content .about-section .read-icon {
     padding: 5px 0px 0px 0px;
@@ -56,18 +58,15 @@
     color: green;
   }
   body .side-bar-container .container #project {
-    padding: 50px 0 20px;
+    padding: 10px 0 20px;
   }
   body .side-bar-container .container #project .videos-container {
     width: 100%;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    padding: 0 40px;
-    gap: 10px;
+    gap: 20px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample {
-    min-width: 150px;
-    height: 200px;
+    width: 390px;
+    height: 150px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample video {
     width: 100%;
@@ -125,10 +124,10 @@
     width: 40%;
   }
   body .side-bar-container .container #abutme {
-    padding: 40px 20px 0px 20px;
+    padding: 10px 20px 0px 20px;
   }
   body .side-bar-container .container #abutme h1 {
-    font-size: 45px;
+    font-size: 35px;
   }
   body .side-bar-container .container #abutme h1::after {
     width: 210px;
@@ -176,18 +175,18 @@
     color: green;
   }
   body .side-bar-container .container #project {
-    padding: 50px 20px 0px 20px;
+    padding: 0 20px;
   }
   body .side-bar-container .container #project .videos-container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20px;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample {
-    min-width: 200px;
-    height: 250px;
+    width: 100%;
   }
   body .side-bar-container .container #project .videos-container .videos-sample video {
     width: 100%;
@@ -267,6 +266,7 @@
   }
   body .side-bar-container .container #abutme .about-content .about-section {
     width: 100%;
+    max-height: 240px;
   }
   body .side-bar-container .container #abutme .about-content .about-section h2 {
     font-size: 20px;
@@ -305,11 +305,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20px;
-    gap: 10px;
+    gap: 20px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample {
     min-width: 200px;
-    height: 100%;
+    height: 200px;
+  }
+  body .side-bar-container .container #project .videos-container .videos-sample p {
+    font-size: 13px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample video {
     width: 100%;
@@ -393,10 +396,10 @@
     width: 60%;
   }
   body .side-bar-container .container .section-holder .offers-container .front-page h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   body .side-bar-container .container .section-holder .offers-container .front-page h3 {
-    font-size: 35px;
+    font-size: 25px;
     word-spacing: 10px;
     padding: 10px 10px;
   }
@@ -417,17 +420,17 @@
     width: 40%;
   }
   body .side-bar-container .container #abutme {
-    padding: 60px 20px 0px 20px;
-    gap: 40px;
+    padding: 30px 20px 0px 20px;
+    gap: 20px;
   }
   body .side-bar-container .container #abutme h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   body .side-bar-container .container #abutme h1::after {
-    width: 300px;
+    width: 200px;
   }
   body .side-bar-container .container #abutme h1::before {
-    width: 300px;
+    width: 200px;
   }
   body .side-bar-container .container #abutme .about-content {
     width: 100%;
@@ -438,7 +441,7 @@
   }
   body .side-bar-container .container #abutme .about-content .about-section {
     width: 100%;
-    height: 300px;
+    height: 230px;
   }
   body .side-bar-container .container #abutme .about-content .about-section h2 {
     font-size: 30px;
@@ -448,7 +451,7 @@
     height: 100%;
   }
   body .side-bar-container .container #abutme .about-content .about-section .readmore {
-    padding: 60px 40px;
+    padding: 30px 40px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -475,19 +478,21 @@
     color: green;
   }
   body .side-bar-container .container #project {
-    padding: 60px 20px 0px 20px;
-    gap: 40px;
+    height: 100vh;
+    padding: 20px 20px 0px 20px;
+    gap: 10px;
   }
   body .side-bar-container .container #project h1 {
     width: 700px;
-    font-size: 50px;
+    font-size: 40px;
   }
   body .side-bar-container .container #project h1::after {
-    width: 390px;
-    left: 155px;
+    width: 300px;
+    left: 200px;
   }
   body .side-bar-container .container #project h1::before {
-    width: 390px;
+    width: 300px;
+    left: 200px;
   }
   body .side-bar-container .container #project .videos-container {
     width: 100%;
@@ -497,8 +502,8 @@
     gap: 20px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample {
-    min-width: 200px;
-    height: 300px;
+    max-width: 500px;
+    height: 200px;
   }
   body .side-bar-container .container #project .videos-container .videos-sample video {
     width: 100%;
