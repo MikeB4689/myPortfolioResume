@@ -19,6 +19,14 @@ function makeItslide() {
                 slideContainer.style.transition = "none"
                 index = slides.length - 5;
                 slideContainer.style.transform = `translateX(${index * - width}px)`
+                dots.forEach(element => {
+                    element.classList.remove('active')
+                    dots[index].classList.add('active')
+
+
+                })
+
+
 
             }
         })
@@ -27,6 +35,7 @@ function makeItslide() {
         dots.forEach(element => {
             element.classList.remove('active')
             dots[index].classList.add('active')
+
 
         })
 
