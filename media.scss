@@ -373,7 +373,7 @@
                             width: 100%;
                             flex-grow: 1;
                             flex-shrink: 0;
-
+                            padding: 0 40px;
                             height: 100%;
                             display: flex;
                             flex-direction: column;
@@ -1194,7 +1194,7 @@
                             width: 100%;
                             flex-grow: 1;
                             flex-shrink: 0;
-
+                            padding: 0 40px;
                             height: 100%;
                             display: flex;
                             flex-direction: column;
@@ -1871,6 +1871,7 @@
 
                     .offers-container {
                         .front-page {
+
                             h1 {
                                 font-size: 40px;
                             }
