@@ -272,7 +272,7 @@ body {
     .container {
         display: flex;
         flex-direction: column;
-        min-width: 355px;
+        min-width: 255px;
 
         position: relative;
 
@@ -426,15 +426,10 @@ body {
 
         .section-holder {
             width: 100%;
-            position: relative;
-            overflow: hidden;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            padding: 20px 0;
-            align-items: center;
-            background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
-
+            overflow: hidden;
 
             .video-bg {
 
@@ -455,21 +450,25 @@ body {
             .offers-container {
                 align-items: center;
                 display: flex;
-                overflow: hidden;
                 inset: 0;
                 padding: 0;
-                width: 90%;
+                width: 100%;
+                height: 300px;
+
+
+
+
+
+
 
                 .front-page {
+
                     width: 100%;
-                    flex-grow: 1;
                     flex-shrink: 0;
-
-                    height: 100%;
+                    flex-grow: 1;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
 
+                    flex-direction: column;
 
 
 
@@ -483,9 +482,11 @@ body {
                     }
 
                     li {
+                        width: 100%;
                         list-style-type: none;
                         color: white;
                         position: relative;
+                        inset: 0;
                     }
 
 
@@ -494,6 +495,7 @@ body {
                         width: 100%;
                         text-align: center;
                         padding-top: 20px;
+
                     }
 
                     h3 {

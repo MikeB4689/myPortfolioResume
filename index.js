@@ -1,3 +1,4 @@
+const slideContainer = document.querySelector('.offers-container')
 const slides = document.querySelectorAll('.front-page')
 const dots = document.querySelectorAll('.dots')
 const menuIcon = document.querySelector('.nav-icon i')
@@ -6,23 +7,31 @@ let index = 0;
 function makeItslide() {
     setInterval(function () {
         index++;
-        console.log(index)
+
         if (index >= slides.length) {
             index = 0
         }
-        slides.forEach(element => {
-            element.style.transform = `translate(${index * - width}px)`
+        slideContainer.style.transition = '0.5s ease-in-out'
+        slideContainer.style.transform = `translateX(${index * - width}px)`
+
+        slideContainer.addEventListener('transitionend', () => {
+            if (slides[index].id === 'clone') {
+                slideContainer.style.transition = "none"
+                index = slides.length - 5;
+                slideContainer.style.transform = `translateX(${index * - width}px)`
+
+            }
         })
+
 
         dots.forEach(element => {
             element.classList.remove('active')
             dots[index].classList.add('active')
+
         })
 
-        console.log(width)
 
-    }, 10000)
-
+    }, 5000)
 
 }
 
@@ -93,7 +102,7 @@ function makeItRead() {
             let clickBook = element.closest('.about-section')
             let openRead = clickBook.querySelector('.readmore')
             openRead.classList.toggle('active')
-            console.log(openRead.className)
+
 
             if (openRead.className === 'readmore active') {
 

@@ -364,10 +364,10 @@
                     .offers-container {
                         align-items: center;
                         display: flex;
-                        overflow: hidden;
+
                         inset: 0;
                         padding: 0;
-                        width: 90%;
+                        width: 100%;
 
                         .front-page {
                             width: 100%;
@@ -1184,12 +1184,13 @@
                     .offers-container {
                         align-items: center;
                         display: flex;
-                        overflow: hidden;
+
                         inset: 0;
                         padding: 0;
-                        width: 90%;
+                        width: 100%;
 
                         .front-page {
+                            padding: 0;
                             width: 100%;
                             flex-grow: 1;
                             flex-shrink: 0;
@@ -2648,9 +2649,12 @@
 
 
                     .offers-container {
-                        width: 60%;
+
+                        width: 100%;
 
                         .front-page {
+                            padding: 0 100px;
+
                             h1 {
                                 font-size: 40px;
                             }

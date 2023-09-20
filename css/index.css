@@ -186,7 +186,7 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container {
   display: flex;
   flex-direction: column;
-  min-width: 355px;
+  min-width: 255px;
   position: relative;
 }
 .side-bar-container .container header {
@@ -293,14 +293,10 @@ body .menuOnscroll.active .top-nav.active ul li a {
 }
 .side-bar-container .container .section-holder {
   width: 100%;
-  position: relative;
-  overflow: hidden;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  overflow: hidden;
 }
 .side-bar-container .container .section-holder .video-bg {
   min-width: 100%;
@@ -314,19 +310,17 @@ body .menuOnscroll.active .top-nav.active ul li a {
 .side-bar-container .container .section-holder .offers-container {
   align-items: center;
   display: flex;
-  overflow: hidden;
   inset: 0;
   padding: 0;
-  width: 90%;
+  width: 100%;
+  height: 300px;
 }
 .side-bar-container .container .section-holder .offers-container .front-page {
   width: 100%;
-  flex-grow: 1;
   flex-shrink: 0;
-  height: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .side-bar-container .container .section-holder .offers-container .front-page .sub-title::after {
   content: "";
@@ -337,9 +331,11 @@ body .menuOnscroll.active .top-nav.active ul li a {
   border-radius: 3px;
 }
 .side-bar-container .container .section-holder .offers-container .front-page li {
+  width: 100%;
   list-style-type: none;
   color: white;
   position: relative;
+  inset: 0;
 }
 .side-bar-container .container .section-holder .offers-container .front-page h1 {
   font-size: 20px;

@@ -250,10 +250,9 @@
   body .side-bar-container .container .section-holder .offers-container {
     align-items: center;
     display: flex;
-    overflow: hidden;
     inset: 0;
     padding: 0;
-    width: 90%;
+    width: 100%;
   }
   body .side-bar-container .container .section-holder .offers-container .front-page {
     width: 100%;
@@ -819,12 +818,12 @@
   body .side-bar-container .container .section-holder .offers-container {
     align-items: center;
     display: flex;
-    overflow: hidden;
     inset: 0;
     padding: 0;
-    width: 90%;
+    width: 100%;
   }
   body .side-bar-container .container .section-holder .offers-container .front-page {
+    padding: 0;
     width: 100%;
     flex-grow: 1;
     flex-shrink: 0;
@@ -1777,7 +1776,10 @@
     color: white;
   }
   body .side-bar-container .container .section-holder .offers-container {
-    width: 60%;
+    width: 100%;
+  }
+  body .side-bar-container .container .section-holder .offers-container .front-page {
+    padding: 0 100px;
   }
   body .side-bar-container .container .section-holder .offers-container .front-page h1 {
     font-size: 40px;
