@@ -1,126 +1,63 @@
-const slideContainer = document.querySelector('.offers-container')
-const slides = document.querySelectorAll('.front-page')
-const dots = document.querySelectorAll('.dots')
-const menuIcon = document.querySelector('.nav-icon i')
-width = slides[0].clientWidth
-let index = 0;
-function makeItslide() {
-    setInterval(function () {
-        index++;
+const slidesContainer = document.querySelector(".slideS-Container");
 
-        if (index >= slides.length) {
-            index = 0
-        }
-        slideContainer.style.transition = '0.5s ease-in-out'
-        slideContainer.style.transform = `translateX(${index * - width}px)`
+const MyPortfolio = [
+  {
+    Fullname: "Michael Dean",
+    Skill: "Front-End Devoloper",
+    Decription:
+      "As a web developer, my objective is to create user- friendly and efficien websites that are visually appealing and ease to navigate.I utilize my skills in HTML, CSS, JavaScript, and PHP to develop websites that meet all the requirements of the client ",
+  },
+  {
+    Fullname: "Michael Dean",
+    Skill: "Customer Service",
+    Decription:
+      "Customer service representative with five years’ experience providingexcellent servicesto customers in a dynamic workenvironment. Solid communication skilinterpersonal skills and fast in resolvingcustomer complaints withexcellent problem-solving skills",
+  },
+  {
+    Fullname: "Michael Dean",
+    Skill: "Virtual Assistant",
+    Decription:
+      "As a web developer, my objective is to create user- friendly and efficien websites that are visually appealing and ease to navigate.I utilize my skills in HTML, CSS, JavaScript, and PHP to develop websites that meet all the requirements of the client ",
+  },
+  {
+    Fullname: "Michael Dean",
+    Skill: "Technical Support ",
+    Decription:
+      "Detail-oriented IT support specialist with great problem-solving skills anda customer service-oriented work ethic.Eager to contribute to company using my scomputer and network analysis,installation,troubleshooting, administrative support, management. ",
+  },
+];
 
-        slideContainer.addEventListener('transitionend', () => {
-            if (slides[index].id === 'clone') {
-                slideContainer.style.transition = "none"
-                index = slides.length - 5;
-                slideContainer.style.transform = `translateX(${index * - width}px)`
+const updateSlidesContainer = () => {
+  const sliderContainer = document.createElement("div");
+  sliderContainer.classList.add("sliderContainer");
 
-            }
-        })
+  const NameHolder = document.createElement("h1");
+  NameHolder.classList.add("NameHolder");
 
+  const SkillTitle = document.createElement("h3");
+  SkillTitle.classList.add("SkillTitle");
 
-        dots.forEach(element => {
-            element.classList.remove('active')
-            dots[index].classList.add('active')
+  const SkillDersctiption = document.createElement("p");
+  SkillDersctiption.classList.add("SkillDersctiption");
 
-        })
+  sliderContainer.appendChild(NameHolder);
+  sliderContainer.appendChild(SkillTitle);
+  sliderContainer.appendChild(SkillDersctiption);
 
+  slidesContainer.appendChild(sliderContainer);
 
-    }, 5000)
+  MyPortfolio.forEach((CardInfo) => {
+    const inSertName = slidesContainer.querySelector(".NameHolder");
+    const inSertSkillTitle = slidesContainer.querySelector(".SkillTitle");
+    const inSertskillDescription =
+      slidesContainer.querySelector(".SkillDersctiption");
 
-}
+    inSertName.innerText = CardInfo.Fullname;
+    inSertSkillTitle.innerText = CardInfo.Skill;
+    inSertskillDescription.innerText = CardInfo.Decription;
 
-menuIcon.onclick = () => {
-    const buttonNav = document.querySelectorAll('.navBar ul li a')
-    let closestParent = menuIcon.closest('header')
-    let navi = closestParent.querySelector('.navBar')
-    navi.classList.toggle('active')
-    buttonNav.forEach(element => {
-        element.addEventListener('click', () => {
-            element.closest('.navBar').classList.remove('active')
-        })
-    })
+    console.log(CardInfo.Skill);
+  });
+};
 
-
-
-
-}
-
-
-window.onscroll = () => {
-    const showIcon = document.querySelector('.menuOnscroll')
-    const navi = document.querySelector('.navBar')
-    const scroll = window.scrollY
-
-
-    console.log(scroll)
-    if (scroll >= 100) {
-        showIcon.classList.add('active')
-        navi.classList.remove('active')
-
-    } else {
-
-        showIcon.classList.remove('active')
-    }
-}
-
-
-function ShowNav() {
-    const showSidebar = document.querySelector('.top-header h1 i')
-    const shownav = document.querySelector('.menuOnscroll')
-    const closeSidebar = document.querySelector('.image-holder p i')
-    shownav.addEventListener('click', () => {
-        const getNav = shownav.querySelector('.top-nav')
-        getNav.classList.toggle('active')
-    })
-
-    showSidebar.addEventListener('click', () => {
-        const parentElement = showSidebar.closest('.side-bar-container')
-        const showSide = parentElement.querySelector('.sidebar-container')
-        showSide.classList.add('active')
-        console.log(showSide)
-    })
-
-    closeSidebar.addEventListener('click', () => {
-        const parentElement = closeSidebar.closest('.side-bar-container')
-        const closeSide = parentElement.querySelector('.sidebar-container')
-        closeSide.classList.remove('active')
-
-    })
-
-}
-
-function makeItRead() {
-    const readMore = document.querySelectorAll('.read-icon p i')
-    readMore.forEach(element => {
-        element.addEventListener('click', e => {
-            let clickBook = element.closest('.about-section')
-            let openRead = clickBook.querySelector('.readmore')
-            openRead.classList.toggle('active')
-
-
-            if (openRead.className === 'readmore active') {
-
-                element.closest('.read-icon').querySelector('span').innerHTML = "ReadLess"
-                element.style.color = "red"
-
-            } else {
-                element.closest('.read-icon').querySelector('span').innerHTML = "Readmore.."
-                element.style.color = ""
-            }
-
-        })
-
-    })
-
-
-}
-
-makeItRead()
-ShowNav();
-makeItslide() 
+updateSlidesContainer();
