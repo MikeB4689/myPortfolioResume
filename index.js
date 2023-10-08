@@ -47,16 +47,17 @@ const updateSlidesContainer = () => {
   slidesContainer.appendChild(sliderContainer);
 
   MyPortfolio.forEach((CardInfo) => {
-    const inSertName = slidesContainer.querySelector(".NameHolder");
-    const inSertSkillTitle = slidesContainer.querySelector(".SkillTitle");
+    const inSertName = slidesContainer.querySelectorAll(".NameHolder");
+    const inSertSkillTitle = slidesContainer.querySelectorAll(".SkillTitle");
     const inSertskillDescription =
-      slidesContainer.querySelector(".SkillDersctiption");
+      slidesContainer.querySelectorAll(".SkillDersctiption");
 
     inSertName.innerText = CardInfo.Fullname;
     inSertSkillTitle.innerText = CardInfo.Skill;
     inSertskillDescription.innerText = CardInfo.Decription;
 
-    console.log(CardInfo.Skill);
+    console.log(inSertName);
+    console.log(inSertSkillTitle);
   });
 };
 
