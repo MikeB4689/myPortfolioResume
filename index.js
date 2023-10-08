@@ -28,37 +28,29 @@ const MyPortfolio = [
 ];
 
 const updateSlidesContainer = () => {
-  const sliderContainer = document.createElement("div");
-  sliderContainer.classList.add("sliderContainer");
+  for (i = 0; i < MyPortfolio.length; i++) {
+    const sliderContainer = document.createElement("div");
+    sliderContainer.classList.add("sliderContainer");
 
-  const NameHolder = document.createElement("h1");
-  NameHolder.classList.add("NameHolder");
+    const NameHolder = document.createElement("h1");
+    NameHolder.classList.add("NameHolder");
 
-  const SkillTitle = document.createElement("h3");
-  SkillTitle.classList.add("SkillTitle");
+    const SkillTitle = document.createElement("h3");
+    SkillTitle.classList.add("SkillTitle");
 
-  const SkillDersctiption = document.createElement("p");
-  SkillDersctiption.classList.add("SkillDersctiption");
+    const SkillDersctiption = document.createElement("p");
+    SkillDersctiption.classList.add("SkillDersctiption");
 
-  sliderContainer.appendChild(NameHolder);
-  sliderContainer.appendChild(SkillTitle);
-  sliderContainer.appendChild(SkillDersctiption);
+    sliderContainer.appendChild(NameHolder);
+    sliderContainer.appendChild(SkillTitle);
+    sliderContainer.appendChild(SkillDersctiption);
 
-  slidesContainer.appendChild(sliderContainer);
+    slidesContainer.appendChild(sliderContainer);
 
-  MyPortfolio.forEach((CardInfo) => {
-    const inSertName = slidesContainer.querySelectorAll(".NameHolder");
-    const inSertSkillTitle = slidesContainer.querySelectorAll(".SkillTitle");
-    const inSertskillDescription =
-      slidesContainer.querySelectorAll(".SkillDersctiption");
-
-    inSertName.innerText = CardInfo.Fullname;
-    inSertSkillTitle.innerText = CardInfo.Skill;
-    inSertskillDescription.innerText = CardInfo.Decription;
-
-    console.log(inSertName);
-    console.log(inSertSkillTitle);
-  });
+    NameHolder.innerText = MyPortfolio[i].Fullname;
+    SkillTitle.innerText = MyPortfolio[i].Skill;
+    SkillDersctiption.innerText = MyPortfolio[i].Decription;
+  }
 };
 
 updateSlidesContainer();

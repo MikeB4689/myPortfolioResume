@@ -13,10 +13,12 @@ body {
 
     .container {
         width: 100%;
+        overflow: hidden;
         height: auto;
 
         header {
 
+            z-index: 100;
             height: auto;
             background-color: white;
             display: flex;
@@ -36,15 +38,18 @@ body {
                 }
 
                 .navBarMobile {
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     width: 100%;
                     height: 500px;
                     height: 0;
                     overflow: hidden;
+                    cursor: pointer;
                     transition: 0.5s ease;
 
                     ul {
+                        width: 100%;
                         display: flex;
                         flex-direction: column;
                         gap: 20px;
@@ -77,6 +82,10 @@ body {
                 justify-content: center;
                 border-radius: 10px;
                 border: 1px solid black;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
 
                 p {
                     display: flex;
@@ -89,6 +98,203 @@ body {
                 }
             }
         }
+
+        #home {
+            background-color: rebeccapurple;
+            width: 100%;
+            height: 80vh;
+            z-index: 1;
+            isolation: isolate;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            flex-direction: column;
+
+            align-items: center;
+
+
+
+
+
+
+            .video-bg {
+                height: 100%;
+                inset: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+
+            }
+
+
+            #left-arrow {
+                position: absolute;
+                top: 40%;
+                left: 0px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3px;
+                border-radius: 10px 0 0 10px;
+                opacity: 20%;
+                z-index: 9999;
+
+                i {
+                    font-size: 30px;
+                    color: white;
+                }
+            }
+
+            #right-arrow {
+                position: absolute;
+                top: 40%;
+                right: 0px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3px;
+                border-radius: 0 10px 10px 0;
+                opacity: 20%;
+                z-index: 9999;
+
+
+                i {
+                    font-size: 30px;
+                    color: white;
+                }
+            }
+
+            #right-arrow,
+            #left-arrow {
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+            }
+
+
+            #right-arrow:hover,
+            #left-arrow:hover {
+                opacity: 1;
+            }
+
+
+            .slideContainerFrame {
+                width: 100%;
+                height: 400px;
+                display: flex;
+                overflow: hidden;
+                justify-content: center;
+
+
+
+                .slideS-Container {
+
+
+                    width: 100%;
+                    height: 400px;
+                    z-index: 1000;
+                    display: flex;
+                    align-items: center;
+
+
+
+
+
+
+
+
+                    .sliderContainer {
+                        position: relative;
+                        flex: 1 0 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+                        z-index: 100;
+
+                        padding: 0 20px;
+
+                        h1 {
+
+                            font-size: 45px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: aliceblue;
+                            position: relative;
+                        }
+
+
+                        h3 {
+                            line-height: 10px;
+                            font-size: 25px;
+                            font-weight: 700;
+                            letter-spacing: 3px;
+                            text-transform: uppercase;
+                            color: brown;
+
+                        }
+
+                        p {
+                            text-align: justify;
+                            padding-top: 20px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: white;
+                            padding: 40px;
+                            position: relative;
+                            z-index: -1;
+
+
+                        }
+
+
+
+
+
+                    }
+
+
+                    .sliderContainer::after {
+                        content: '';
+                        inset: 0;
+                        width: 90%;
+                        height: 90px;
+                        background-color: black;
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 28px;
+                        padding: 0;
+                        border-radius: 20px 20px 0 0;
+                    }
+
+
+
+                }
+
+            }
+
+        }
+
+        #home::after {
+
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            inset: 0;
+            opacity: 50%;
+
+        }
+
+        #socials {
+            z-index: 99;
+        }
+
+
 
     }
 
