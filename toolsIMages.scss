@@ -1,0 +1,41 @@
+.handsOnTools {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h1 {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: white;
+
+    }
+
+    ul {
+        width: 100%;
+        height: 60px;
+        display: flex;
+
+        gap: 20px;
+
+        li {
+            list-style-type: none;
+            flex: 1 0 80px;
+
+
+
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+
+            }
+        }
+    }
+
+}
