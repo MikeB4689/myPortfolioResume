@@ -22,7 +22,7 @@ const buttonClick = () => {
     if (counter >= slideImg.length) {
       counter = slideImg.length - 1;
     }
-    slider.style.transition = "opacity 0.5s ease-in";
+    slider.style.transition = "0.5s ease-in";
     slider.style.transform = `translateX(${-size * counter}px)`;
   });
 
