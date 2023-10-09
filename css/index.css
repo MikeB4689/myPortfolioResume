@@ -30,7 +30,7 @@ body .container header .top-header {
   align-items: center;
 }
 body .container header .top-header h1 {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 800;
 }
 body .container header .top-header .navBarMobile {
@@ -80,7 +80,7 @@ body .container header .nav-icon p {
   justify-content: center;
 }
 body .container header .nav-icon p i {
-  font-size: 40px;
+  font-size: 35px;
 }
 body .container #home {
   background-color: rebeccapurple;
@@ -171,7 +171,7 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer {
   padding: 0 20px;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer h1 {
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   text-transform: uppercase;
   color: aliceblue;
@@ -179,7 +179,7 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer h1
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer h3 {
   line-height: 10px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -188,7 +188,7 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer h3
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer p {
   line-height: 30px;
   padding-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: white;
   padding: 40px;
