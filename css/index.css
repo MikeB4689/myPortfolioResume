@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body .container {
-  width: 100%;
+  min-width: 255px;
   overflow: hidden;
   height: auto;
 }
@@ -22,7 +22,6 @@ body .container header {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  padding: 0 40px;
 }
 body .container header .top-header {
   display: flex;
@@ -30,15 +29,13 @@ body .container header .top-header {
   align-items: center;
 }
 body .container header .top-header h1 {
-  font-size: 70px;
+  font-size: 20px;
   font-weight: 800;
 }
 body .container header .top-header .navBarMobile {
   width: 100%;
   display: flex;
-  align-items: center;
   width: 100%;
-  height: 500px;
   height: 0;
   overflow: hidden;
   cursor: pointer;
@@ -55,10 +52,10 @@ body .container header .top-header .navBarMobile ul li {
 }
 body .container header .top-header .navBarMobile ul li a {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
 }
 body .container header .top-header .navBarMobile.active {
-  height: 500px;
+  height: 300px;
 }
 body .container header .top-header .navBarTDesktop {
   display: none;
@@ -67,10 +64,10 @@ body .container header .nav-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid black;
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 20px;
   cursor: pointer;
 }
@@ -80,7 +77,7 @@ body .container header .nav-icon p {
   justify-content: center;
 }
 body .container header .nav-icon p i {
-  font-size: 35px;
+  font-size: 25px;
 }
 body .container #home {
   background-color: rebeccapurple;
@@ -101,6 +98,7 @@ body .container #home .video-bg {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
+  z-index: -1;
 }
 body .container #home #left-arrow {
   position: absolute;
@@ -146,18 +144,18 @@ body .container #home #left-arrow:hover {
   opacity: 1;
 }
 body .container #home .slideContainerFrame {
-  width: 90%;
+  width: 70%;
   height: 400px;
   display: flex;
   overflow: hidden;
   justify-content: center;
-  z-index: 10;
+  z-index: 999;
 }
 body .container #home .slideContainerFrame .slideS-Container {
   width: 100%;
   height: 400px;
   z-index: 1000;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer {
@@ -165,46 +163,47 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer {
   flex: 1 0 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   cursor: pointer;
   z-index: 100;
-  padding: 0 20px;
+  gap: 10px;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer h1 {
-  font-size: 35px;
+  width: 100%;
+  font-size: 25px;
   text-align: center;
   text-transform: uppercase;
   color: aliceblue;
   position: relative;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer h3 {
-  line-height: 10px;
-  font-size: 20px;
+  width: 100%;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: brown;
+  text-align: center;
+  margin-top: -10px;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer p {
-  line-height: 30px;
-  padding-top: 20px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: white;
-  padding: 40px;
   position: relative;
+  line-height: 20px;
   z-index: -1;
+  padding: 0 10px;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer::after {
   content: "";
   inset: 0;
-  width: 90%;
-  height: 90px;
+  width: 100%;
+  height: 60px;
   background-color: black;
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 28px;
   padding: 0;
   border-radius: 20px 20px 0 0;
 }
