@@ -24,7 +24,9 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            overflow: hidden;
+            padding: 20px;
+
+
 
 
             .top-header {
@@ -83,8 +85,8 @@ body {
                 border-radius: 5px;
                 border: 1px solid black;
                 position: absolute;
-                top: 0;
-                right: 20px;
+                top: 22px;
+                right: 30px;
                 cursor: pointer;
 
                 p {
@@ -102,12 +104,12 @@ body {
         #home {
             background-color: rebeccapurple;
             width: 100%;
-            height: 80vh;
+            height: 60vh;
             z-index: 1;
             isolation: isolate;
             position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             padding-top: 40px;
             flex-direction: column;
             align-items: center;
@@ -182,7 +184,7 @@ body {
 
             .slideContainerFrame {
                 width: 70%;
-                height: 400px;
+                height: 300px;
                 display: flex;
                 overflow: hidden;
                 justify-content: center;
@@ -193,7 +195,7 @@ body {
                 .slideS-Container {
 
                     width: 100%;
-                    height: 400px;
+                    height: 300px;
                     z-index: 1000;
                     display: inline-flex;
                     align-items: center;
@@ -205,7 +207,6 @@ body {
                         flex: 1 0 100%;
                         display: flex;
                         flex-direction: column;
-
                         justify-content: center;
                         cursor: pointer;
                         z-index: 100;
@@ -215,7 +216,7 @@ body {
 
 
                         h1 {
-                            width: 100%;
+
                             font-size: 25px;
                             text-align: center;
                             text-transform: uppercase;
@@ -226,7 +227,7 @@ body {
 
 
                         h3 {
-                            width: 100%;
+
                             font-size: 12px;
                             font-weight: 700;
                             letter-spacing: 3px;
@@ -258,7 +259,7 @@ body {
                     .sliderContainer::after {
                         content: '';
                         inset: 0;
-                        width: 100%;
+                        width: 99%;
                         height: 60px;
                         background-color: black;
                         position: absolute;
@@ -273,6 +274,40 @@ body {
 
                 }
 
+            }
+
+        }
+
+
+        #socials {
+            display: flex;
+            gap: 10px;
+            z-index: 999;
+
+            li {
+                width: 25px;
+                height: 25px;
+                list-style-type: none;
+                background-color: white;
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px brown;
+                cursor: pointer;
+
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+
+                    i {
+                        color: brown;
+                        font-weight: 700;
+                    }
+
+                }
             }
 
         }
