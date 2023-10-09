@@ -146,11 +146,12 @@ body .container #home #left-arrow:hover {
   opacity: 1;
 }
 body .container #home .slideContainerFrame {
-  width: 100%;
+  width: 90%;
   height: 400px;
   display: flex;
   overflow: hidden;
   justify-content: center;
+  z-index: 10;
 }
 body .container #home .slideContainerFrame .slideS-Container {
   width: 100%;
@@ -185,7 +186,7 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer h3
   color: brown;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer p {
-  text-align: justify;
+  line-height: 30px;
   padding-top: 20px;
   font-size: 18px;
   font-weight: 400;
