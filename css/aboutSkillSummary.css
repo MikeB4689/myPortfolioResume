@@ -1,0 +1,10 @@
+.skillsSummary {
+  width: 100%;
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+.skillsSummary .SummarySkills {
+  flex: 1 0 100%;
+}/*# sourceMappingURL=aboutSkillSummary.css.map */

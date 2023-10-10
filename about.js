@@ -1,5 +1,5 @@
-const aboutSummary = document.querySelector(".AboutMeSummary");
-const TechSkill = document.querySelector(".techSkill");
+const aboutSummary = document.querySelector("#summary");
+const TechSkill = document.querySelector("#teksills");
 
 const MyPortfolio = [
   {
