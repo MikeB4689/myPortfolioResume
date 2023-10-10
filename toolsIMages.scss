@@ -1,41 +1,37 @@
 .handsOnTools {
-    width: 100%;
-    height: 200px;
-    background-color: black;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  ul {
+    flex: 1 0 100%;
+
+    height: 60px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+    gap: 20px;
+    animation: animate 35s infinite linear;
 
-    h1 {
-        font-size: 16px;
-        text-transform: uppercase;
-        color: white;
+    li {
+      list-style-type: none;
+      flex: 1 0 80px;
 
-    }
-
-    ul {
+      img {
         width: 100%;
-        height: 60px;
-        display: flex;
-
-        gap: 20px;
-
-        li {
-            list-style-type: none;
-            flex: 1 0 80px;
-
-
-
-
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-
-            }
-        }
+        height: 100%;
+        border-radius: 10px;
+      }
     }
+  }
+}
 
+@keyframes animate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

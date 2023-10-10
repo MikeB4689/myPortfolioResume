@@ -84,15 +84,14 @@ body .container header .nav-icon p i {
 body .container #home {
   background-color: rebeccapurple;
   width: 100%;
-  height: 60vh;
-  z-index: -1;
+  height: 80vh;
+  z-index: 1;
   isolation: isolate;
   position: relative;
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 40px;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 body .container #home .video-bg {
   height: 100%;
@@ -158,7 +157,6 @@ body .container #home .slideContainerFrame .slideS-Container {
   height: 300px;
   z-index: 1000;
   display: inline-flex;
-  align-items: center;
 }
 body .container #home .slideContainerFrame .slideS-Container .sliderContainer {
   position: relative;
@@ -203,7 +201,7 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer::a
   background-color: black;
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: 30px;
   padding: 0;
   border-radius: 20px 20px 0 0;
 }
@@ -212,6 +210,7 @@ body .container #socials {
   gap: 10px;
   z-index: 999;
   transition: 3ms ease-in-out;
+  z-index: 9999;
 }
 body .container #socials li {
   width: 25px;
@@ -246,6 +245,7 @@ body .container #home::after {
   background-color: black;
   inset: 0;
   opacity: 50%;
+  z-index: -1;
 }
 body .container #socials {
   z-index: 99;
