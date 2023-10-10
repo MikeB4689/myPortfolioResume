@@ -27,6 +27,7 @@ body .container header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  z-index: -1;
 }
 body .container header .top-header {
   display: flex;
@@ -88,134 +89,33 @@ body .container header .nav-icon p i {
 body .container #home {
   background-color: rebeccapurple;
   width: 100%;
-  height: 80vh;
-  z-index: -1;
+  height: 40vh;
   isolation: isolate;
+  z-index: 999;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 body .container #home .video-bg {
   width: 100%;
+  height: 100%;
+  inset: 0;
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  z-index: 9999;
-}
-body .container #home #left-arrow {
-  position: absolute;
-  top: 40%;
-  left: 0px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px;
-  border-radius: 10px 0 0 10px;
-  opacity: 20%;
-  z-index: 9999;
-}
-body .container #home #left-arrow i {
-  font-size: 30px;
-  color: white;
-}
-body .container #home #right-arrow {
-  position: absolute;
-  top: 40%;
-  right: 0px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px;
-  border-radius: 0 10px 10px 0;
-  opacity: 20%;
-  z-index: 9999;
-}
-body .container #home #right-arrow i {
-  font-size: 30px;
-  color: white;
-}
-body .container #home #right-arrow,
-body .container #home #left-arrow {
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-body .container #home #right-arrow:hover,
-body .container #home #left-arrow:hover {
-  opacity: 1;
-}
-body .container #home .slideContainerFrame {
-  width: 70%;
-  height: 300px;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  z-index: 999;
-}
-body .container #home .slideContainerFrame .slideS-Container {
-  width: 100%;
-  height: 300px;
-  z-index: 1000;
-  display: inline-flex;
-}
-body .container #home .slideContainerFrame .slideS-Container .sliderContainer {
-  position: relative;
-  flex: 1 0 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 100;
-  gap: 10px;
-}
-body .container #home .slideContainerFrame .slideS-Container .sliderContainer h1 {
-  font-size: 25px;
-  text-align: center;
-  text-transform: uppercase;
-  color: aliceblue;
-  position: relative;
-}
-body .container #home .slideContainerFrame .slideS-Container .sliderContainer h3 {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: brown;
-  text-align: center;
-  margin-top: -10px;
-}
-body .container #home .slideContainerFrame .slideS-Container .sliderContainer p {
-  font-size: 12px;
-  font-weight: 400;
-  color: white;
-  position: relative;
-  line-height: 20px;
   z-index: -1;
-  padding: 0 10px;
 }
-body .container #home .slideContainerFrame .slideS-Container .sliderContainer::after {
-  content: "";
-  inset: 0;
-  width: 99%;
-  height: 60px;
-  background-color: black;
-  position: absolute;
-  z-index: -1;
-  top: 80px;
-  padding: 0;
-  border-radius: 20px 20px 0 0;
-}
-body .container #socials {
+body .container #home #socials {
   display: flex;
   gap: 10px;
   z-index: 999;
   transition: 3ms ease-in-out;
   z-index: 9999;
 }
-body .container #socials li {
+body .container #home #socials li {
   width: 25px;
   height: 25px;
   list-style-type: none;
@@ -224,7 +124,7 @@ body .container #socials li {
   box-shadow: 2px 2px 5px brown;
   cursor: pointer;
 }
-body .container #socials li a {
+body .container #home #socials li a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -232,28 +132,15 @@ body .container #socials li a {
   justify-content: center;
   text-decoration: none;
 }
-body .container #socials li a i {
+body .container #home #socials li a i {
   color: brown;
   font-weight: 700;
   transition: 0.3s ease-in-out;
 }
-body .container #socials li a i:hover {
+body .container #home #socials li a i:hover {
   color: black;
 }
-body .container #home::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  inset: 0;
-  opacity: 50%;
-  z-index: -1;
-}
-body .container #socials {
-  z-index: 99;
-}
-body .container .cv-resume {
+body .container #home .cv-resume {
   width: 200px;
   height: 40px;
   border-radius: 10px;
@@ -262,13 +149,22 @@ body .container .cv-resume {
   transition: 0.5s ease;
   z-index: 999;
 }
-body .container .cv-resume a {
+body .container #home .cv-resume a {
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   color: brown;
   transition: 0.3s ease-in-out;
 }
-body .container .cv-resume a:hover {
+body .container #home .cv-resume a:hover {
   color: black;
+}
+body .container #home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 60%;
+  z-index: -1;
 }/*# sourceMappingURL=index.css.map */

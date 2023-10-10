@@ -21,6 +21,9 @@
 #about .aboutCountainer .aboutMeTitle i {
   color: brown;
 }
+#about .aboutCountainer .aboutMeTitle i.active {
+  color: green;
+}
 #about .aboutCountainer .navilink {
   display: flex;
   justify-content: center;
