@@ -201,7 +201,7 @@ body .container #home .slideContainerFrame .slideS-Container .sliderContainer::a
   background-color: black;
   position: absolute;
   z-index: -1;
-  top: 30px;
+  top: 80px;
   padding: 0;
   border-radius: 20px 20px 0 0;
 }

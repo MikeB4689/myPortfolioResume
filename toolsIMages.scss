@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    animation: animate 35s infinite linear;
 
     ul {
         flex: 1 0 100%;
@@ -24,5 +25,16 @@
                 border-radius: 10px;
             }
         }
+    }
+}
+
+
+@keyframes animate {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translatex(-100%);
     }
 }
