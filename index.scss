@@ -28,6 +28,7 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: 20px;
+      z-index: -1;
 
       .top-header {
         display: flex;
@@ -53,6 +54,7 @@ body {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            z-index: -1;
 
             li {
               list-style-type: none;
