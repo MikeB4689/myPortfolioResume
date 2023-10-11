@@ -3,7 +3,6 @@ window.addEventListener("scroll", () => {
   const removeIcon = document.querySelector(".aboutMeTitle span i");
   sections.forEach((sec) => {
     let id = sec.getAttribute("id");
-    console.log(id);
 
     let offeset = sec.offsetHeight;
     let top = window.scrollY;
