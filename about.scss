@@ -13,7 +13,7 @@
   width: 100%;
   height: 100vh;
   padding: 40px 10px;
-  z-index: 9999;
+  z-index: -1;
   position: relative;
   isolation: isolate;
   background-image: url("../Envanto/vintage-audio-cassettes-background-banner-retro-2022-12-16-12-14-53-utc.jpg");
@@ -34,7 +34,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    z-index: -1;
+    isolation: isolate;
+
 
     .aboutMeTitle {
       width: 100%;
@@ -84,8 +85,9 @@
       }
     }
 
-    .SummarySkills {
+    #teksills {
       z-index: 999;
+
       h1 {
         color: white;
         font-size: 20px;
@@ -102,8 +104,15 @@
     }
 
     #summary {
+
       position: relative;
       z-index: 999999;
+
+      h1 {
+        color: white;
+        font-size: 20px;
+      }
+
       .imageProfile-container {
         width: 100%;
         display: flex;
@@ -111,21 +120,18 @@
         justify-content: center;
         position: absolute;
         bottom: 0;
-        .image-profile {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
 
+        .image-profile {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
           background-color: blue;
           background-image: url("../Envanto/profile.jpg");
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-
-          transform: rotate(180deg);
           transform: translateX(-250%);
-
-          transition: 0.1s ease;
+          transition: 0.3s ease;
         }
 
         .image-profile::after {
@@ -140,7 +146,16 @@
         .image-profile.active {
           animation: 1s rotatePix;
           transform: translateX(0);
+
         }
+
+        .image-profile.out {
+
+          transform: translateX(250%);
+          animation: 1s rotatePixout;
+
+        }
+
       }
     }
 
@@ -148,11 +163,12 @@
       padding: 30px 0;
       font-size: 16px;
       font-weight: 400;
-      height: 80px;
+      height: 160px;
       overflow: hidden;
       transition: 0.2s ease-in-out;
       color: white;
       z-index: 99999;
+      line-height: 25px;
     }
 
     .showMore {
@@ -183,34 +199,124 @@
 
 @keyframes rotatePix {
   from {
-    transform: rotate(0);
-    transform: translateX(-150%);
+    transform: rotate(0%);
+    transform: translateX(-250%);
   }
 
   to {
-    transform: translateX(0%);
     transform: rotate(180deg);
     opacity: 3%;
   }
 }
 
+@keyframes rotatePixout {
+  from {
+    transform: rotate(180deg);
+
+  }
+
+  to {
+
+    transform: rotate(0%);
+    opacity: 3%;
+  }
+}
+
+
+
+
+
 @media only screen and (min-width: 512px) {
   #about {
     padding: 40px 40px;
+
     .aboutCountainer {
       z-index: 9999;
+
       #summary {
         z-index: 99999;
+
         .imageProfile-container {
+          z-index: -1;
+
           .image-profile {
             width: 200px;
             height: 200px;
           }
         }
       }
+
+      .aboutParagraph.active {
+
+        height: 400px;
+
+      }
+
       .showMore {
         z-index: 9999;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  #about {
+
+
+    padding: 40px 80px;
+
+    .aboutCountainer {
+      z-index: 9999;
+
+
+      #summary {
+        z-index: 99999;
+
+        .imageProfile-container {
+
+
+          .image-profile {
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+          }
+
+          .image-profile.active {
+            opacity: 1;
+          }
+        }
+      }
+
+
+      #teksills {
+        z-index: 999;
+
+        h1 {
+          color: white;
+          font-size: 35px;
+        }
+
+        #techSummaryTtitle {
+          color: brown;
+        }
+
+        #techSummaryDescription {
+          color: white;
+          font-size: 16px;
+        }
+      }
+
+      .aboutParagraph.active {
+
+        height: 300px;
+
+      }
+
+      .showMore {
+        z-index: 9999;
+      }
+
+
     }
   }
 }

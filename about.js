@@ -56,12 +56,16 @@ const updateAboutSummary = (message) => {
   showMore.addEventListener("click", () => {
     const openBtn = showMore.closest("#about").querySelector(".aboutParagraph");
     openBtn.classList.toggle("active");
+
     if (openBtn.clientHeight != 80) {
       showMore.innerText = "Show more";
+      imageshowup.classList.remove("out");
       imageshowup.classList.add("active");
+      console.log(clientHeight);
     } else {
       showMore.innerText = "Show less";
       imageshowup.classList.remove("active");
+      imageshowup.classList.add("out");
     }
   });
 };

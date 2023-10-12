@@ -280,4 +280,24 @@ body .container #home::after {
   body .container #home .home-content h3 .frontEnd {
     font-size: 30px;
   }
+}
+@media only screen and (min-width: 820px) {
+  body .container #home .home-content {
+    width: 600px;
+    padding: 0;
+  }
+  body .container #home .home-content h1 {
+    font-size: 40px;
+  }
+  body .container #home .home-content h1 span {
+    font-size: 75px;
+    line-height: 110px;
+  }
+  body .container #home .home-content h3 {
+    line-height: 10px;
+    font-size: 35px;
+  }
+  body .container #home .home-content h3 .frontEnd {
+    font-size: 45px;
+  }
 }/*# sourceMappingURL=index.css.map */
