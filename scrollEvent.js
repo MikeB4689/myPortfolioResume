@@ -1,6 +1,7 @@
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const removeIcon = document.querySelector(".aboutMeTitle span i");
+  const imageshowup = document.querySelector("..image-profile");
   sections.forEach((sec) => {
     let id = sec.getAttribute("id");
 

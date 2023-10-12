@@ -1,9 +1,35 @@
+.hide {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
 #about {
   width: 100%;
   height: 100vh;
-  background-color: white;
   padding: 40px 40px;
   z-index: 9999;
+  position: relative;
+  isolation: isolate;
+  background-image: url("../Envanto/vintage-audio-cassettes-background-banner-retro-2022-12-16-12-14-53-utc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9999;
+
+  .background-img {
+    position: absolute;
+    background-color: black;
+    inset: 0;
+    opacity: 80%;
+    z-index: -1;
+  }
+
+
 
   .aboutCountainer {
     height: 100%;
@@ -14,9 +40,11 @@
     .aboutMeTitle {
       width: 100%;
       text-align: center;
-      font-size: 30px;
+      font-size: 40px;
       font-weight: 800;
       letter-spacing: 2px;
+      color: white;
+      z-index: 9999;
 
       i {
         color: brown;
@@ -33,6 +61,7 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
+      color: white;
 
       li {
         transform: translateY(0);
@@ -42,7 +71,9 @@
         a {
           font-size: 14px;
           font-weight: 600;
+          color: white;
         }
+
         a.active {
           font-size: 18px;
           color: green;
@@ -54,6 +85,61 @@
       }
     }
 
+    .SummarySkills {
+      h1 {
+        color: white;
+      }
+
+      #techSummaryTtitle {
+
+        color: brown;
+
+
+      }
+
+      #techSummaryDescription {
+        color: white;
+      }
+
+
+
+
+    }
+
+    #summary {
+
+      position: relative;
+
+
+      .image-profile {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: blue;
+        background-image: url("../Envanto/profile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        transform: rotate(180deg);
+        transform: translateX(-150%);
+
+        transition: 0.5s ease-in-out;
+
+
+      }
+
+      .image-profile.active {
+        animation: 1s rotatePix;
+        transform: translateX(0);
+
+
+      }
+
+    }
+
     .aboutParagraph {
       padding: 30px 0;
       font-size: 18px;
@@ -61,6 +147,8 @@
       height: 80px;
       overflow: hidden;
       transition: 0.5s ease-in-out;
+      color: wheat;
+
     }
 
     .showMore {
@@ -73,6 +161,7 @@
       font-size: 20px;
       transition: 0.5s ease-in-out;
       cursor: pointer;
+      color: white;
     }
 
     .showMore:hover {
@@ -82,6 +171,25 @@
     .aboutParagraph.active {
       height: 390px;
       font-size: 13px;
+      color: white;
     }
+
+
+  }
+}
+
+@keyframes rotatePix {
+  from {
+
+    transform: rotate(0);
+    transform: translateX(-150%);
+
+  }
+
+  to {
+
+    transform: translateX(0%);
+    transform: rotate(180deg);
+    opacity: 3%;
   }
 }

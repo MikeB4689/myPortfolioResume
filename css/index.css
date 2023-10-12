@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  background-color: red;
   font-family: "Poppins", sans-serif;
 }
 body .container {
@@ -22,7 +21,6 @@ body .container {
 body .container header {
   z-index: 100;
   height: auto;
-  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,7 +70,6 @@ body .container header .nav-icon {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  border: 1px solid black;
   position: absolute;
   top: 22px;
   right: 30px;
@@ -87,19 +84,121 @@ body .container header .nav-icon p i {
   font-size: 25px;
 }
 body .container #home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 255px;
+  height: 100vh;
+  position: relative;
+  gap: 20px;
+  isolation: isolate;
+}
+body .container #home .imagepops {
+  z-index: 999;
   width: 100%;
   height: 100vh;
-  background-image: url("./Envanto/working-in-professional-music-studio-2022-07-26-03-24-33-utc.jpg");
-  gap: 20px;
+  position: absolute;
+}
+body .container #home .imagepops ul {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: 3;
+  width: 100%;
+  height: 100vh;
+}
+body .container #home .imagepops ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+body .container #home .imagepops ul li img {
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  border-radius: 50%;
+}
+body .container #home .imagepops ul li:nth-child(1) img {
+  animation: 5s popUps infinite;
+  animation-delay: 6s;
+}
+body .container #home .imagepops ul li:nth-child(2) img {
+  animation: 5s popUps infinite;
+  animation-delay: 10s;
+}
+body .container #home .imagepops ul li:nth-child(3) img {
+  animation: 5s popUps infinite;
+  animation-delay: 4s;
+}
+body .container #home .imagepops ul li:nth-child(4) img {
+  animation: 5s popUps infinite;
+  animation-delay: 10s;
+}
+body .container #home .imagepops ul li:nth-child(5) img {
+  animation: 5s popUps infinite;
+  animation-delay: 3s;
+}
+body .container #home .imagepops ul li:nth-child(6) img {
+  animation: 5s popUps infinite;
+  animation-delay: 7s;
+}
+body .container #home .imagepops ul li:nth-child(7) img {
+  animation: 5s popUps infinite;
+  animation-delay: 1s;
+}
+body .container #home .imagepops ul li:nth-child(8) img {
+  animation: 5s popUps infinite;
+  animation-delay: 10s;
+}
+body .container #home #bGimage {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+body .container #home .home-content {
+  height: 400px;
+  z-index: 999;
+  padding: 0 20px;
+  animation: 0.5s homeAnimate linear;
+  animation-timing-function: ease;
+}
+body .container #home .home-content h1 {
+  font-size: 35px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+}
+body .container #home .home-content h1 span {
+  font-size: 45px;
+  letter-spacing: 10px;
+}
+body .container #home .home-content h3 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: brown;
+}
+body .container #home .home-content .frontEnd {
+  color: teal;
+  font-size: 45px;
+  letter-spacing: normal;
+  animation: 5s changeColor infinite;
 }
 body .container #home .cv-resume {
   width: 200px;
   height: 40px;
   border-radius: 10px;
   background-color: white;
+  animation: 0.6s homeAnimate linear;
+  animation-timing-function: ease;
   cursor: pointer;
   transition: 0.5s ease;
-  z-index: 999;
 }
 body .container #home .cv-resume a {
   font-size: 16px;
@@ -113,10 +212,42 @@ body .container #home .cv-resume a:hover {
 }
 body .container #home::after {
   content: "";
-  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 60%;
+  height: 100vh;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgb(8, 3, 53), rgb(60, 71, 167), rgba(226, 224, 217, 0.2));
+  opacity: 98%;
   z-index: -1;
+}
+
+@keyframes homeAnimate {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes popUps {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 50%;
+  }
+}
+@keyframes changeColor {
+  0% {
+    color: teal;
+  }
+  50% {
+    color: rgb(59, 248, 232);
+  }
+  100% {
+    color: teal;
+  }
 }/*# sourceMappingURL=index.css.map */
