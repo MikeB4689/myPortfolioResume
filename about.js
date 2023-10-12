@@ -1,6 +1,6 @@
 const aboutSummary = document.querySelector("#summary");
 const TechSkill = document.querySelector("#teksills");
-
+const imageshowup = document.querySelector(".image-profile");
 const MyPortfolio = [
   {
     Fullname: "Michael Dean",
@@ -58,8 +58,10 @@ const updateAboutSummary = (message) => {
     openBtn.classList.toggle("active");
     if (openBtn.clientHeight != 80) {
       showMore.innerText = "Show more";
+      imageshowup.classList.add("active");
     } else {
       showMore.innerText = "Show less";
+      imageshowup.classList.remove("active");
     }
   });
 };

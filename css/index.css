@@ -168,25 +168,22 @@ body .container #home .home-content {
   animation-timing-function: ease;
 }
 body .container #home .home-content h1 {
-  font-size: 35px;
+  font-size: 18px;
   color: white;
   display: flex;
   flex-direction: column;
-  word-spacing: 10px;
-  letter-spacing: 5px;
 }
 body .container #home .home-content h1 span {
-  font-size: 45px;
-  letter-spacing: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 body .container #home .home-content h3 {
-  font-size: 30px;
-  letter-spacing: 3px;
+  font-size: 16px;
   color: brown;
 }
 body .container #home .home-content .frontEnd {
   color: teal;
-  font-size: 45px;
+  font-size: 16px;
   letter-spacing: normal;
   animation: 5s changeColor infinite;
 }
@@ -197,6 +194,7 @@ body .container #home .cv-resume {
   background-color: white;
   animation: 0.6s homeAnimate linear;
   animation-timing-function: ease;
+  z-index: 99999;
   cursor: pointer;
   transition: 0.5s ease;
 }
@@ -249,5 +247,37 @@ body .container #home::after {
   }
   100% {
     color: teal;
+  }
+}
+@media only screen and (min-width: 330px) {
+  body .container #home .home-content h1 {
+    font-size: 30px;
+  }
+  body .container #home .home-content h1 span {
+    font-size: 35px;
+  }
+  body .container #home .home-content h3 {
+    font-size: 16px;
+  }
+  body .container #home .home-content h3 .frontEnd {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 512px) {
+  body .container #home .home-content {
+    width: 400px;
+    padding: 0;
+  }
+  body .container #home .home-content h1 {
+    font-size: 30px;
+  }
+  body .container #home .home-content h1 span {
+    font-size: 45px;
+  }
+  body .container #home .home-content h3 {
+    font-size: 25px;
+  }
+  body .container #home .home-content h3 .frontEnd {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=index.css.map */

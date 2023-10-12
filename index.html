@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/toolsIMages.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/aboutSkillSummary.css" />
+    <title>My-Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/media.css" />
-  <link rel="stylesheet" href="css/toolsIMages.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="css/aboutSkillSummary.css" />
-  <title>My-Portfolio</title>
-</head>
+  <body>
+    <div class="container">
+      <header id="topHeader">
+        <div class="top-header">
+          <h1>MDB.COM <i class="bx bx-last-page"></i></h1>
+          <nav class="navBarMobile">
+            <ul>
+              <li><a href="#topHeader">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#project">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li id="sign-up"><a href="#">Sign-Up</a></li>
+              <li id="login"><a href="#">Login</a></li>
+            </ul>
+          </nav>
 
-<body>
-  <div class="container">
-    <header id="topHeader">
-      <div class="top-header">
-        <h1>MDB.COM <i class="bx bx-last-page"></i></h1>
-        <nav class="navBarMobile">
-          <ul>
-            <li><a href="#topHeader">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li id="sign-up"><a href="#">Sign-Up</a></li>
-            <li id="login"><a href="#">Login</a></li>
+          <nav class="navBarTDesktop">
+            <ul>
+              <li><a href="#topHeader">Home</a></li>
+              <li><a href="#abutme">About</a></li>
+              <li><a href="#project">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li id="sign-up"><a href="#">Sign-Up</a></li>
+              <li id="login"><a href="#">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="nav-icon">
+          <p><i class="bx bx-menu"></i></p>
+        </div>
+      </header>
+
+      <section class="hide" id="home">
+        <div class="imagepops">
+          <ul id="imagesPops">
+            <li><img src="tools and crm/download.jpg " alt="" /></li>
+            <li><img src="tools and crm/helium10.png " alt="" /></li>
+            <li><img src="tools and crm/html.png" alt="" /></li>
+            <li><img src="tools and crm/jS.png" alt="" /></li>
+            <li><img src="tools and crm/keepa.png" alt="" /></li>
+            <li><img src="tools and crm/reactja.png" alt="" /></li>
+            <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
+            <li><img src="tools and crm/asinzen.png" alt="" /></li>
+            <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
           </ul>
-        </nav>
+        </div>
 
-        <nav class="navBarTDesktop">
-          <ul>
-            <li><a href="#topHeader">Home</a></li>
-            <li><a href="#abutme">About</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li id="sign-up"><a href="#">Sign-Up</a></li>
-            <li id="login"><a href="#">Login</a></li>
-          </ul>
-        </nav>
-      </div>
+        <img
+          src="Envanto/working-in-professional-music-studio-2022-07-26-03-24-33-utc.jpg"
+          alt=""
+          id="bGimage"
+        />
 
-      <div class="nav-icon">
-        <p><i class="bx bx-menu"></i></p>
-      </div>
-    </header>
+        <div class="home-content">
+          <h1>Hello! I'm a <span>Michael Dean</span></h1>
+          <h3>I am <span class="frontEnd">Front End Developer</span></h3>
+        </div>
 
-    <section class="hide" id="home">
+        <button class="cv-resume">
+          <a href="Envanto/MichaelDeanResume2023.pdf" download="resume.pdf"
+            >Download my CV</a
+          >
+        </button>
+      </section>
 
+      <section class="handsOnTools">
+        <h1>Tools Experties</h1>
 
-      <div class="imagepops">
-        <ul id="imagesPops">
+        <ul>
+          <li>
+            <img src="tools and crm/CSS3_logo_and_wordmark.svg.png" alt="" />
+          </li>
           <li><img src="tools and crm/download.jpg " alt="" /></li>
           <li><img src="tools and crm/helium10.png " alt="" /></li>
           <li><img src="tools and crm/html.png" alt="" /></li>
@@ -59,103 +96,64 @@
           <li><img src="tools and crm/reactja.png" alt="" /></li>
           <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
           <li><img src="tools and crm/asinzen.png" alt="" /></li>
-          <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
-
-
-        </ul>
-      </div>
-
-      <img src="Envanto/working-in-professional-music-studio-2022-07-26-03-24-33-utc.jpg" alt="" id="bGimage">
-
-
-      <div class="home-content">
-        <h1>Hello! I'm a <span>Michael Dean</span> </h1>
-        <h3>I am <span class="frontEnd">Front End Developer</span></h3>
-
-      </div>
-
-      <button class="cv-resume">
-        <a href="Envanto/MichaelDeanResume2023.pdf" download="resume.pdf">Download my CV</a>
-      </button>
-    </section>
-
-    <section class="handsOnTools">
-      <h1>Tools Experties</h1>
-
-      <ul>
-        <li>
-          <img src="tools and crm/CSS3_logo_and_wordmark.svg.png" alt="" />
-        </li>
-        <li><img src="tools and crm/download.jpg " alt="" /></li>
-        <li><img src="tools and crm/helium10.png " alt="" /></li>
-        <li><img src="tools and crm/html.png" alt="" /></li>
-        <li><img src="tools and crm/jS.png" alt="" /></li>
-        <li><img src="tools and crm/keepa.png" alt="" /></li>
-        <li><img src="tools and crm/reactja.png" alt="" /></li>
-        <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
-        <li><img src="tools and crm/asinzen.png" alt="" /></li>
-        <li>
-          <img src="tools and crm/CSS3_logo_and_wordmark.svg.png" alt="" />
-        </li>
-        <li><img src="tools and crm/download.jpg " alt="" /></li>
-        <li><img src="tools and crm/helium10.png " alt="" /></li>
-        <li><img src="tools and crm/html.png" alt="" /></li>
-        <li><img src="tools and crm/jS.png" alt="" /></li>
-        <li><img src="tools and crm/keepa.png" alt="" /></li>
-        <li><img src="tools and crm/reactja.png" alt="" /></li>
-        <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
-      </ul>
-    </section>
-
-    <section class="hide" id="about">
-      <div class="background-img">
-      </div>
-
-      <div class="aboutCountainer">
-        <h1 class="aboutMeTitle">
-          About Me <span><i class="bx bxs-user"></i></span>
-        </h1>
-        <ul class="navilink">
-          <li><a href="#topHeader">Home </a></li>
-          /
           <li>
-            <a href="#summary" class="active">Summary</a>
+            <img src="tools and crm/CSS3_logo_and_wordmark.svg.png" alt="" />
           </li>
-          /
-          <li><a href="#teksills">Tech Skills</a></li>
+          <li><img src="tools and crm/download.jpg " alt="" /></li>
+          <li><img src="tools and crm/helium10.png " alt="" /></li>
+          <li><img src="tools and crm/html.png" alt="" /></li>
+          <li><img src="tools and crm/jS.png" alt="" /></li>
+          <li><img src="tools and crm/keepa.png" alt="" /></li>
+          <li><img src="tools and crm/reactja.png" alt="" /></li>
+          <li><img src="tools and crm/sellerAmp.jpg" alt="" /></li>
         </ul>
-        <div class="skillsSummary">
-          <div class="SummarySkills" id="summary">
+      </section>
 
+      <section class="hide" id="about">
+        <div class="background-img"></div>
 
-
-            <div class="image-profile">
-
+        <div class="aboutCountainer">
+          <h1 class="aboutMeTitle">
+            About Me <span><i class="bx bxs-user"></i></span>
+          </h1>
+          <ul class="navilink">
+            <li><a href="#topHeader">Home </a></li>
+            /
+            <li>
+              <a href="#summary" class="active">Summary</a>
+            </li>
+            /
+            <li><a href="#teksills">Tech Skills</a></li>
+          </ul>
+          <div class="skillsSummary">
+            <div class="SummarySkills" id="summary">
+              <div class="imageProfile-container">
+                <div class="image-profile"></div>
+              </div>
             </div>
+
+            <div class="SummarySkills" id="teksills"></div>
           </div>
-          <div class="SummarySkills" id="teksills"></div>
+
+          <div class="pagelink"></div>
         </div>
+      </section>
 
-        <div class="pagelink"></div>
-      </div>
-    </section>
+      <footer>
+        <p>all right's reserve @2023</p>
+      </footer>
+    </div>
 
-    <footer>
-      <p>all right's reserve @2023</p>
-    </footer>
-  </div>
+    <!-- end of div -->
+  </body>
 
-  <!-- end of div -->
-</body>
+  <script src="about.js"></script>
+  <script src="index.js"></script>
 
-<script src="about.js"></script>
-<script src="index.js"></script>
-
-<script src="navigation.js"></script>
-<script src="windowScrol.js"></script>
-<script src="scrollEvent.js"></script>
-<script src="buttons.js"></script>
-<script src="aboutsummary.js"></script>
-<script src="observeIntersect.js"></script>
-
+  <script src="navigation.js"></script>
+  <script src="windowScrol.js"></script>
+  <script src="scrollEvent.js"></script>
+  <script src="buttons.js"></script>
+  <script src="aboutsummary.js"></script>
+  <script src="observeIntersect.js"></script>
 </html>
