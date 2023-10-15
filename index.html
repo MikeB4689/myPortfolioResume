@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/toolsIMages.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/aboutSkillSummary.css" />
+  <link rel="stylesheet" href="css/footer.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <title>My-Portfolio</title>
 </head>
 
@@ -32,7 +35,7 @@
         <nav class="navBarTDesktop">
           <ul>
             <li><a href="#topHeader">Home</a></li>
-            <li><a href="#abutme">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#project">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li id="sign-up"><a href="#">Sign-Up</a></li>
@@ -105,26 +108,28 @@
       <div class="background-img"></div>
 
       <div class="aboutCountainer">
-        <h1 class="aboutMeTitle">
-          About Me <span><i class="bx bxs-user"></i></span>
+        <h1 class="aboutMeTitle"><a href="#topHeader">About Me</a>
+          <span><i class="bx bxs-user"></i></span>
         </h1>
         <ul class="navilink">
-          <li><a href="#topHeader">Home </a></li>
-          /
+
           <li>
             <a href="#summary" class="active">Summary</a>
           </li>
           /
-          <li><a href="#teksills">Tech Skills</a></li>
+          <li><a href="#teksills">Work History</a></li>
         </ul>
         <div class="skillsSummary">
-          <div class="SummarySkills" id="summary">
+          <div class="SummarySkills active" id="summary">
             <div class="imageProfile-container">
               <div class="image-profile"></div>
             </div>
           </div>
 
-          <div class="SummarySkills" id="teksills"></div>
+          <div class="SummarySkills" id="teksills">
+            <div class="backgrounBlur"></div>
+          </div>
+
         </div>
 
         <div class="pagelink"></div>
@@ -132,7 +137,53 @@
     </section>
 
     <footer>
-      <p>all right's reserve @2023</p>
+      <div class="footerContainer">
+
+        <div class="title">
+          <h1>Michael Dean Belen</h1>
+          <h2>Portfolio</h2>
+
+
+          <ul>
+            <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+            <li><a href="#"><i class='bx bxl-linkedin-square'></i></a></li>
+            <li><a href="#"><i class='bx bxl-whatsapp-square'></i></a></li>
+            <li><a href="#"><i class='bx bxl-skype'></i> </a></li>
+            <li><a href="#"><i class='bx bxl-discord'></i></a></li>
+          </ul>
+
+        </div>
+
+        <div class="pageSection">
+          <h2>Site map</h2>
+          <ul>
+            <li><a href="#topHeader">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#project">PROJECT</a></li>
+
+          </ul>
+        </div>
+
+        <div class="contacts">
+
+          <form action="submit">
+
+            <p>Send me message</p>
+            <input type="text" placeholder="Subject">
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+          </form>
+          <p>
+            <button>Send</button>
+          </p>
+
+
+        </div>
+
+
+
+      </div>
+      <p>All Right's Reserve @2023</p>
     </footer>
   </div>
 
@@ -147,5 +198,6 @@
 <script src="buttons.js"></script>
 <script src="aboutsummary.js"></script>
 <script src="observeIntersect.js"></script>
+
 
 </html>

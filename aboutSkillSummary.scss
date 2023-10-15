@@ -1,12 +1,30 @@
 .skillsSummary {
+
+  position: relative;
   width: 100%;
-  scroll-behavior: smooth;
-  display: flex;
-  gap: 10px;
+  height: 100%;
+  isolation: isolate;
+
   overflow: hidden;
-  z-index: -1;
+
+
   .SummarySkills {
-    flex: 1 0 100%;
-    z-index: 9999;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: 1s ease-in-out;
+    visibility: hidden;
+  }
+
+
+  .SummarySkills.active {
+    position: absolute;
+    padding: 0 20px;
+    inset: 0;
+    opacity: 1;
+    visibility: visible;
+
+
   }
 }

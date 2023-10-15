@@ -1,7 +1,7 @@
 .hide {
   opacity: 0;
   filter: blur(5px);
-  transition: all 1s;
+  transition: all 1s ease-in-out;
 }
 
 .show {
@@ -33,8 +33,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+
     gap: 20px;
     isolation: isolate;
+    position: relative;
 
 
     .aboutMeTitle {
@@ -46,67 +48,166 @@
       color: white;
       z-index: 9999;
 
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
       i {
         color: brown;
       }
 
       i.active {
-        color: green;
+        color: teal;
       }
     }
 
     .navilink {
       display: flex;
-      height: 50px;
+      height: 100px;
       justify-content: center;
       align-items: center;
       gap: 10px;
       color: white;
 
       li {
-        transform: translateY(0);
-        transition: 0.5s ease-in-out;
+
+        height: 100%;
         list-style-type: none;
+        display: flex;
+        align-items: center;
 
         a {
           font-size: 12px;
           font-weight: 600;
           color: white;
+          transform: translate(0);
+          transition: 0.3s ease-in-out;
         }
 
         a.active {
-          font-size: 15px;
-          color: green;
+          font-size: 16px;
+          color: teal;
+          transform: translateY(-5px);
         }
       }
 
-      li a.ctive {
-        transform: translateY(-5px);
-      }
+
     }
+
 
     #teksills {
-      z-index: 999;
+      width: 100%;
+      height: 400px;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      h1 {
+
+
+      .techSummary {
+        width: 100%;
         color: white;
         font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        isolation: isolate;
+        transition: 0.5s ease-in-out;
+        position: relative;
+
       }
 
-      #techSummaryTtitle {
-        color: brown;
+      .techSummary::after {
+        content: 'Please hover and scroll work history';
+        width: 300px;
+        height: 40px;
+        font-size: 12px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        right: 150px;
+        border-radius: 6px;
+        opacity: 50%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+        transition: 0.5s ease-in-out;
+
+
       }
 
-      #techSummaryDescription {
-        color: white;
-        font-size: 13px;
+      .techSummary:hover.techSummary::after {
+        opacity: 1;
+
+
+      }
+
+      .techContainer {
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+        z-index: -1;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+
+
+
+
+
+
+        .techSummaryContainer {
+
+          flex: 1 0 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 20px 40px;
+
+
+
+
+          #techSummaryTtitle {
+            color: teal;
+            width: 100%;
+            font-size: 22px;
+
+          }
+
+          #techSummaryDescription {
+            color: white;
+            font-size: 14px;
+            line-height: 25px;
+
+          }
+        }
+
+
+
+      }
+
+      .techContainer:hover {
+        overflow: scroll;
+        overflow-x: hidden;
       }
     }
 
-    #summary {
 
+    #summary {
+      width: 100%;
+      height: 100%;
       position: relative;
-      z-index: 999999;
+
+
 
       h1 {
         color: white;
@@ -115,11 +216,12 @@
 
       .imageProfile-container {
         width: 100%;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        bottom: 0;
+        top: 0;
+        z-index: -1;
 
         .image-profile {
           width: 100px;
@@ -132,6 +234,7 @@
           background-repeat: no-repeat;
           transform: translateX(-250%);
           transition: 0.3s ease;
+
         }
 
         .image-profile::after {
@@ -146,54 +249,83 @@
         .image-profile.active {
           animation: 1s rotatePix;
           transform: translateX(0);
+          opacity: 1;
+
+
 
         }
 
         .image-profile.out {
 
-          transform: translateX(250%);
+          transform: translateX(350%);
           animation: 1s rotatePixout;
+          width: 200px;
+          height: 200px;
+          transition: .4s ease-in-out;
+          z-index: 9999;
+          opacity: 0;
 
         }
 
       }
+
+      .aboutMeContainer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-evenly;
+
+        .aboutParagraphContainer {
+          display: flex;
+          flex-direction: column;
+
+
+          width: 100%;
+          height: 300px;
+
+          .aboutParagraph {
+            display: flex;
+            height: 100px;
+            font-size: 12px;
+            font-weight: 400;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            color: white;
+            z-index: 99999;
+
+
+          }
+
+          .showMore {
+            height: 30px;
+            padding: 0;
+            text-align: center;
+            font-size: 16px;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            color: white;
+            z-index: 9999999;
+          }
+
+          .showMore:hover {
+            font-weight: 700;
+          }
+
+          .aboutParagraph.active {
+            height: auto;
+            flex: 1;
+            font-size: 12px;
+            color: white;
+            line-height: 30px;
+
+          }
+
+        }
+      }
     }
 
-    .aboutParagraph {
-      padding: 30px 0;
-      font-size: 16px;
-      font-weight: 400;
-      height: 160px;
-      overflow: hidden;
-      transition: 0.2s ease-in-out;
-      color: white;
-      z-index: 99999;
-      line-height: 25px;
-    }
 
-    .showMore {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 30px;
-      padding: 0;
-      text-align: center;
-      font-size: 16px;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
-      color: white;
-      z-index: 9999999;
-    }
-
-    .showMore:hover {
-      font-weight: 700;
-    }
-
-    .aboutParagraph.active {
-      height: 200px;
-      font-size: 13px;
-      color: white;
-    }
   }
 }
 
@@ -223,98 +355,450 @@
 }
 
 
+@keyframes bounce {
+  0% {
+    transform: translateY(100px);
+  }
 
+  10% {
+    transform: translateY(50px);
+  }
+}
+
+
+
+
+@media only screen and (min-width: 460px) {
+
+  #about {
+    padding: 40px 60px;
+
+    .aboutCountainer {
+
+      z-index: 9999;
+
+      #summary {
+        z-index: 99999;
+
+
+        .imageProfile-container {
+          z-index: -1;
+          height: 200px;
+
+          .image-profile {
+            width: 200px;
+            height: 200px;
+          }
+        }
+
+        .aboutMeContainer {
+
+          .aboutParagraphContainer {
+
+            .aboutParagraph {
+              font-size: 18px;
+            }
+
+
+            .aboutParagraph.active {
+
+              height: 100%;
+              font-size: 12px;
+
+            }
+          }
+
+
+
+        }
+
+
+
+        .showMore {
+          z-index: 9999;
+        }
+      }
+
+    }
+  }
+
+
+}
 
 
 @media only screen and (min-width: 512px) {
   #about {
-    padding: 40px 40px;
+    padding: 40px 60px;
 
     .aboutCountainer {
+
       z-index: 9999;
 
       #summary {
-        z-index: 99999;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
 
         .imageProfile-container {
           z-index: -1;
 
+
+
+
           .image-profile {
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
+
+          }
+        }
+
+        .aboutMeContainer {
+          height: 600px;
+
+          .aboutParagraphContainer {
+            justify-content: center;
+
+            .aboutParagraph {
+              font-size: 16px;
+            }
+
+
+            .aboutParagraph.active {
+
+              height: auto;
+              font-size: 18px;
+
+            }
+
+            .showMore {
+              z-index: 9999;
+            }
+
+
           }
         }
       }
 
-      .aboutParagraph.active {
-
+      #teksills {
+        width: 100%;
         height: 400px;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+
+
+
+        h1 {
+          width: 100%;
+          color: white;
+          font-size: 25px;
+          text-align: center;
+        }
+
+        .techContainer {
+
+
+
+
+
+
+
+          .techSummaryContainer {
+
+
+
+
+
+            #techSummaryTtitle {
+
+              font-size: 25px;
+
+            }
+
+            #techSummaryDescription {
+              color: white;
+              font-size: 18px;
+              line-height: 30px;
+
+            }
+          }
+
+
+
+        }
+
 
       }
 
-      .showMore {
-        z-index: 9999;
-      }
+
     }
   }
 }
 
+
+@media only screen and (min-width: 512px) {
+
+  #about {
+    padding: 40px 60px;
+
+    .aboutCountainer {
+
+      z-index: 9999;
+
+      #summary {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+
+        .imageProfile-container {
+          z-index: -1;
+          max-width: 500px;
+          height: 500px;
+          align-items: baseline;
+
+          padding-top: 70px;
+
+          .image-profile {
+            width: 160px;
+            height: 160px;
+
+          }
+        }
+
+        .aboutMeContainer {
+          height: 600px;
+          justify-content: center;
+
+
+
+          .aboutParagraphContainer {
+
+            justify-content: start;
+
+            .aboutParagraph {
+              font-size: 16px;
+            }
+
+
+            .aboutParagraph.active {
+
+              height: auto;
+              font-size: 18px;
+
+            }
+
+            .showMore {
+              z-index: 9999;
+            }
+
+
+          }
+        }
+      }
+
+      #teksills {
+        width: 100%;
+        height: 400px;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        h1 {
+          width: 100%;
+          color: white;
+          font-size: 25px;
+          text-align: center;
+        }
+
+        .techContainer {
+
+
+          .techSummaryContainer {
+
+            #techSummaryTtitle {
+
+              font-size: 25px;
+
+            }
+
+            #techSummaryDescription {
+              color: white;
+              font-size: 18px;
+              line-height: 30px;
+
+            }
+          }
+
+
+
+        }
+
+
+      }
+
+
+    }
+  }
+
+}
+
+
 @media only screen and (min-width: 820px) {
   #about {
 
-
-    padding: 40px 80px;
+    min-width: 800px;
 
     .aboutCountainer {
-      z-index: 9999;
 
 
-      #summary {
-        z-index: 99999;
-
-        .imageProfile-container {
 
 
-          .image-profile {
-            width: 200px;
-            height: 200px;
-            opacity: 0;
+      .navilink {
+        li {
+          a {
+            font-size: 20px;
+            text-transform: uppercase;
           }
 
-          .image-profile.active {
-            opacity: 1;
+          a.active {
+            font-size: 25px;
           }
         }
       }
 
 
-      #teksills {
-        z-index: 999;
+      .skillsSummary {
 
-        h1 {
-          color: white;
-          font-size: 35px;
+        #summary {
+
+          gap: 20px;
+
+          .imageProfile-container {
+            max-width: 500px;
+            height: 500px;
+            align-items: baseline;
+            padding-top: 40px;
+
+            .image-profile {
+              width: 250px;
+              height: 250px;
+
+            }
+
+          }
+
+
+
+          .aboutMeContainer {
+            height: auto;
+            justify-content: center;
+
+
+
+            .aboutParagraphContainer {
+
+              justify-content: start;
+
+              .aboutParagraph {
+                max-width: 900px;
+                font-size: 16px;
+              }
+
+
+              .aboutParagraph.active {
+                max-width: 900px;
+                height: auto;
+                font-size: 18px;
+                line-height: 30px;
+
+              }
+
+              .showMore {
+                z-index: 9999;
+              }
+
+
+            }
+          }
+
         }
 
-        #techSummaryTtitle {
-          color: brown;
-        }
+        #teksills {
+          z-index: -1;
 
-        #techSummaryDescription {
-          color: white;
-          font-size: 16px;
+
+
+
+          isolation: isolate;
+
+          h1 {
+            width: 100%;
+            color: white;
+            font-size: 30px;
+          }
+
+          .techContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+
+
+
+            .techSummaryContainer {
+              width: 80%;
+              height: 180px;
+              overflow: hidden;
+              border-radius: 10px;
+
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              justify-content: center;
+              padding: 0 20px;
+
+              position: relative;
+              isolation: isolate;
+
+
+              #techSummaryTtitle {
+                color: teal;
+                width: 100%;
+                font-size: 25px;
+
+              }
+
+              #techSummaryDescription {
+                color: white;
+                font-size: 18px;
+                line-height: 35px;
+              }
+            }
+
+
+
+          }
+
+
+
         }
       }
 
-      .aboutParagraph.active {
 
-        height: 300px;
 
-      }
-
-      .showMore {
-        z-index: 9999;
-      }
 
 
     }

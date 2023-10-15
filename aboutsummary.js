@@ -1,15 +1,20 @@
 const navilink = document.querySelectorAll(".navilink li a");
-const navLi = document.querySelectorAll(".navilink li");
+
+const skillSummaryContainer = document.querySelectorAll(".SummarySkills");
 
 navilink.forEach((links, i) => {
   links.addEventListener("click", (e) => {
+    skillSummaryContainer.forEach((element) => {
+      element.classList.remove("active");
+    });
+
     navilink.forEach((element) => {
       element.classList.remove("active");
+      console.log(element.classList);
     });
-    navLi.forEach((element) => {
-      element.classList.remove("active");
-    });
+
     navilink[i].classList.add("active");
-    navLi[i].classList.add("active");
+
+    skillSummaryContainer[i].classList.add("active");
   });
 });

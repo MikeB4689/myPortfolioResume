@@ -1,7 +1,7 @@
 .hide {
   opacity: 0;
   filter: blur(5px);
-  transition: all 1s;
+  transition: all 1s ease-in-out;
 }
 
 .show {
@@ -34,6 +34,7 @@
   flex-direction: column;
   gap: 20px;
   isolation: isolate;
+  position: relative;
 }
 #about .aboutCountainer .aboutMeTitle {
   width: 100%;
@@ -44,54 +45,118 @@
   color: white;
   z-index: 9999;
 }
+#about .aboutCountainer .aboutMeTitle a {
+  text-decoration: none;
+  color: white;
+}
 #about .aboutCountainer .aboutMeTitle i {
   color: brown;
 }
 #about .aboutCountainer .aboutMeTitle i.active {
-  color: green;
+  color: teal;
 }
 #about .aboutCountainer .navilink {
   display: flex;
-  height: 50px;
+  height: 100px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   color: white;
 }
 #about .aboutCountainer .navilink li {
-  transform: translateY(0);
-  transition: 0.5s ease-in-out;
+  height: 100%;
   list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 #about .aboutCountainer .navilink li a {
   font-size: 12px;
   font-weight: 600;
   color: white;
+  transform: translate(0);
+  transition: 0.3s ease-in-out;
 }
 #about .aboutCountainer .navilink li a.active {
-  font-size: 15px;
-  color: green;
-}
-#about .aboutCountainer .navilink li a.ctive {
+  font-size: 16px;
+  color: teal;
   transform: translateY(-5px);
 }
 #about .aboutCountainer #teksills {
-  z-index: 999;
+  width: 100%;
+  height: 400px;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#about .aboutCountainer #teksills h1 {
+#about .aboutCountainer #teksills .techSummary {
+  width: 100%;
   color: white;
   font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  isolation: isolate;
+  transition: 0.5s ease-in-out;
+  position: relative;
 }
-#about .aboutCountainer #teksills #techSummaryTtitle {
-  color: brown;
+#about .aboutCountainer #teksills .techSummary::after {
+  content: "Please hover and scroll work history";
+  width: 300px;
+  height: 40px;
+  font-size: 12px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 150px;
+  border-radius: 6px;
+  opacity: 50%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
 }
-#about .aboutCountainer #teksills #techSummaryDescription {
+#about .aboutCountainer #teksills .techSummary:hover.techSummary::after {
+  opacity: 1;
+}
+#about .aboutCountainer #teksills .techContainer {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  z-index: -1;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+#about .aboutCountainer #teksills .techContainer .techSummaryContainer {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+}
+#about .aboutCountainer #teksills .techContainer .techSummaryContainer #techSummaryTtitle {
+  color: teal;
+  width: 100%;
+  font-size: 22px;
+}
+#about .aboutCountainer #teksills .techContainer .techSummaryContainer #techSummaryDescription {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 25px;
+}
+#about .aboutCountainer #teksills .techContainer:hover {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 #about .aboutCountainer #summary {
+  width: 100%;
+  height: 100%;
   position: relative;
-  z-index: 999999;
 }
 #about .aboutCountainer #summary h1 {
   color: white;
@@ -99,11 +164,12 @@
 }
 #about .aboutCountainer #summary .imageProfile-container {
   width: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
+  top: 0;
+  z-index: -1;
 }
 #about .aboutCountainer #summary .imageProfile-container .image-profile {
   width: 100px;
@@ -128,26 +194,41 @@
 #about .aboutCountainer #summary .imageProfile-container .image-profile.active {
   animation: 1s rotatePix;
   transform: translateX(0);
+  opacity: 1;
 }
 #about .aboutCountainer #summary .imageProfile-container .image-profile.out {
-  transform: translateX(250%);
+  transform: translateX(350%);
   animation: 1s rotatePixout;
+  width: 200px;
+  height: 200px;
+  transition: 0.4s ease-in-out;
+  z-index: 9999;
+  opacity: 0;
 }
-#about .aboutCountainer .aboutParagraph {
-  padding: 30px 0;
-  font-size: 16px;
+#about .aboutCountainer #summary .aboutMeContainer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+#about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+}
+#about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph {
+  display: flex;
+  height: 100px;
+  font-size: 12px;
   font-weight: 400;
-  height: 160px;
   overflow: hidden;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   color: white;
   z-index: 99999;
-  line-height: 25px;
 }
-#about .aboutCountainer .showMore {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .showMore {
   height: 30px;
   padding: 0;
   text-align: center;
@@ -157,13 +238,15 @@
   color: white;
   z-index: 9999999;
 }
-#about .aboutCountainer .showMore:hover {
+#about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .showMore:hover {
   font-weight: 700;
 }
-#about .aboutCountainer .aboutParagraph.active {
-  height: 200px;
-  font-size: 13px;
+#about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph.active {
+  height: auto;
+  flex: 1;
+  font-size: 12px;
   color: white;
+  line-height: 30px;
 }
 
 @keyframes rotatePix {
@@ -185,9 +268,17 @@
     opacity: 3%;
   }
 }
-@media only screen and (min-width: 512px) {
+@keyframes bounce {
+  0% {
+    transform: translateY(100px);
+  }
+  10% {
+    transform: translateY(50px);
+  }
+}
+@media only screen and (min-width: 460px) {
   #about {
-    padding: 40px 40px;
+    padding: 40px 60px;
   }
   #about .aboutCountainer {
     z-index: 9999;
@@ -197,54 +288,228 @@
   }
   #about .aboutCountainer #summary .imageProfile-container {
     z-index: -1;
+    height: 200px;
   }
   #about .aboutCountainer #summary .imageProfile-container .image-profile {
     width: 200px;
     height: 200px;
   }
-  #about .aboutCountainer .aboutParagraph.active {
-    height: 400px;
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph {
+    font-size: 18px;
   }
-  #about .aboutCountainer .showMore {
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph.active {
+    height: 100%;
+    font-size: 12px;
+  }
+  #about .aboutCountainer #summary .showMore {
     z-index: 9999;
   }
 }
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 512px) {
   #about {
-    padding: 40px 80px;
+    padding: 40px 60px;
   }
   #about .aboutCountainer {
     z-index: 9999;
   }
   #about .aboutCountainer #summary {
-    z-index: 99999;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  #about .aboutCountainer #summary .imageProfile-container {
+    z-index: -1;
   }
   #about .aboutCountainer #summary .imageProfile-container .image-profile {
-    width: 200px;
-    height: 200px;
-    opacity: 0;
+    width: 160px;
+    height: 160px;
   }
-  #about .aboutCountainer #summary .imageProfile-container .image-profile.active {
-    opacity: 1;
+  #about .aboutCountainer #summary .aboutMeContainer {
+    height: 600px;
   }
-  #about .aboutCountainer #teksills {
-    z-index: 999;
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer {
+    justify-content: center;
   }
-  #about .aboutCountainer #teksills h1 {
-    color: white;
-    font-size: 35px;
-  }
-  #about .aboutCountainer #teksills #techSummaryTtitle {
-    color: brown;
-  }
-  #about .aboutCountainer #teksills #techSummaryDescription {
-    color: white;
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph {
     font-size: 16px;
   }
-  #about .aboutCountainer .aboutParagraph.active {
-    height: 300px;
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph.active {
+    height: auto;
+    font-size: 18px;
   }
-  #about .aboutCountainer .showMore {
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .showMore {
     z-index: 9999;
+  }
+  #about .aboutCountainer #teksills {
+    width: 100%;
+    height: 400px;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .aboutCountainer #teksills h1 {
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+  }
+  #about .aboutCountainer #teksills .techContainer .techSummaryContainer #techSummaryTtitle {
+    font-size: 25px;
+  }
+  #about .aboutCountainer #teksills .techContainer .techSummaryContainer #techSummaryDescription {
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 512px) {
+  #about {
+    padding: 40px 60px;
+  }
+  #about .aboutCountainer {
+    z-index: 9999;
+  }
+  #about .aboutCountainer #summary {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  #about .aboutCountainer #summary .imageProfile-container {
+    z-index: -1;
+    max-width: 500px;
+    height: 500px;
+    align-items: baseline;
+    padding-top: 70px;
+  }
+  #about .aboutCountainer #summary .imageProfile-container .image-profile {
+    width: 160px;
+    height: 160px;
+  }
+  #about .aboutCountainer #summary .aboutMeContainer {
+    height: 600px;
+    justify-content: center;
+  }
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer {
+    justify-content: start;
+  }
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph {
+    font-size: 16px;
+  }
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph.active {
+    height: auto;
+    font-size: 18px;
+  }
+  #about .aboutCountainer #summary .aboutMeContainer .aboutParagraphContainer .showMore {
+    z-index: 9999;
+  }
+  #about .aboutCountainer #teksills {
+    width: 100%;
+    height: 400px;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .aboutCountainer #teksills h1 {
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+  }
+  #about .aboutCountainer #teksills .techContainer .techSummaryContainer #techSummaryTtitle {
+    font-size: 25px;
+  }
+  #about .aboutCountainer #teksills .techContainer .techSummaryContainer #techSummaryDescription {
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 820px) {
+  #about {
+    min-width: 800px;
+  }
+  #about .aboutCountainer .navilink li a {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  #about .aboutCountainer .navilink li a.active {
+    font-size: 25px;
+  }
+  #about .aboutCountainer .skillsSummary #summary {
+    gap: 20px;
+  }
+  #about .aboutCountainer .skillsSummary #summary .imageProfile-container {
+    max-width: 500px;
+    height: 500px;
+    align-items: baseline;
+    padding-top: 40px;
+  }
+  #about .aboutCountainer .skillsSummary #summary .imageProfile-container .image-profile {
+    width: 250px;
+    height: 250px;
+  }
+  #about .aboutCountainer .skillsSummary #summary .aboutMeContainer {
+    height: auto;
+    justify-content: center;
+  }
+  #about .aboutCountainer .skillsSummary #summary .aboutMeContainer .aboutParagraphContainer {
+    justify-content: start;
+  }
+  #about .aboutCountainer .skillsSummary #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph {
+    max-width: 900px;
+    font-size: 16px;
+  }
+  #about .aboutCountainer .skillsSummary #summary .aboutMeContainer .aboutParagraphContainer .aboutParagraph.active {
+    max-width: 900px;
+    height: auto;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  #about .aboutCountainer .skillsSummary #summary .aboutMeContainer .aboutParagraphContainer .showMore {
+    z-index: 9999;
+  }
+  #about .aboutCountainer .skillsSummary #teksills {
+    z-index: -1;
+    isolation: isolate;
+  }
+  #about .aboutCountainer .skillsSummary #teksills h1 {
+    width: 100%;
+    color: white;
+    font-size: 30px;
+  }
+  #about .aboutCountainer .skillsSummary #teksills .techContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #about .aboutCountainer .skillsSummary #teksills .techContainer .techSummaryContainer {
+    width: 80%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+    isolation: isolate;
+  }
+  #about .aboutCountainer .skillsSummary #teksills .techContainer .techSummaryContainer #techSummaryTtitle {
+    color: teal;
+    width: 100%;
+    font-size: 25px;
+  }
+  #about .aboutCountainer .skillsSummary #teksills .techContainer .techSummaryContainer #techSummaryDescription {
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
   }
 }/*# sourceMappingURL=about.css.map */
