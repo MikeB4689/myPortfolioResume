@@ -33,7 +33,7 @@ const MyPortfolio = [
 
 const school = "Tarlac State  University";
 
-const aboutMe = `Hello my name is Michael, I studied  information technology at  ${school}  due to my passion for web programming. Join me as I talk about my online bootcamp and how I'm applying my knowledge to become the best web developer that I can be. I am confident that my skills and experience in JavaScript, HTML, CSS, React.js will be good fit for this position. I am hoping to be considered  Thank you!.`;
+const aboutMe = `Hello my name is Michael, I studied  information technology at  ${school}  due to my passion for web designs and web  programming !. Join me as I talk about my online bootcamp and how I'm applying my knowledge to become the best web developer that I can be. I am confident that my skills and experience in JavaScript, HTML, CSS, React.js will be good fit for this position. I am hoping to be considered  Thank you!.`;
 
 const updateAboutSummary = (message) => {
   const aboutMeContainer = document.createElement("div");
