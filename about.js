@@ -21,7 +21,7 @@ const MyPortfolio = [
     Fullname: "Michael Dean",
     Skill: "Virtual Assistant",
     Decription:
-      "As a web developer, my objective is to create user- friendly and efficien websites that are visually appealing and ease to navigate.I utilize my skills in HTML, CSS, JavaScript, and PHP to develop websites that meet all the requirements of the client ",
+      "Amazon virtual assistants can help with tasks such as product research, customer support, product listing, and optimization, running Amazon ad campaigns, order processing, and translation",
   },
   {
     Fullname: "Michael Dean",
