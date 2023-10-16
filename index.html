@@ -166,16 +166,17 @@
 
         <div class="contacts">
 
-          <form action="submit">
+          <form action="submit" name="email_form" class="email_form">
 
             <p>Send me message</p>
-            <input type="text" placeholder="Subject">
+            <input name="emailAdd" type="email" placeholder="Enter you Email Address">
+            <input name="subject" type="text" placeholder="Subject">
             <textarea name="message" id="message" cols="30" rows="10"></textarea>
-
+            <p>
+              <button name="button" class="button">Send</button>
+            </p>
           </form>
-          <p>
-            <button>Send</button>
-          </p>
+
 
 
         </div>
@@ -190,6 +191,7 @@
   <!-- end of div -->
 </body>
 
+
 <script src="about.js"></script>
 <script src="index.js"></script>
 <script src="navigation.js"></script>
@@ -199,5 +201,43 @@
 <script src="aboutsummary.js"></script>
 <script src="observeIntersect.js"></script>
 
+<script>
+
+
+  const clickBtn = document.querySelector(".button");
+
+  const form_submit = document.forms.email_form;
+  const email = form_submit.emailAdd;
+  const Subject = form_submit.subject;
+  const message = form_submit.message;
+
+
+  clickBtn.addEventListener("click ", (e) => {
+    e.preventDefault();
+
+    if (!email.value) {
+      alert(`please complete information`)
+
+    }
+    if (!Subject.value) {
+      alert(`please complete information`)
+
+    } if (!message.value) {
+      alert(`please complete information`)
+
+    }
+
+
+    else {
+      email.value = ''
+      Subject.value = '';
+      message.value = ''
+
+      alert('this is a test email ')
+    }
+
+  });
+
+</script>
 
 </html>
