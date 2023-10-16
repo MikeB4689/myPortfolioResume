@@ -96,6 +96,7 @@ footer .footerContainer .contacts form textarea {
   resize: none;
   width: 100%;
   border-radius: 10px;
+  padding: 20px;
 }
 footer .footerContainer .contacts p button {
   width: 50%;
