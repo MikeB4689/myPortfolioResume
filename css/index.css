@@ -329,6 +329,9 @@ body .container #home::after {
   body .container header .nav-icon {
     display: none;
   }
+  body .container #home #bGimage {
+    height: 100vh;
+  }
   body .container #home .home-content {
     width: 600px;
     padding: 0;
@@ -339,6 +342,7 @@ body .container #home::after {
   body .container #home .home-content h1 span {
     font-size: 75px;
     line-height: 110px;
+    line-height: 90px;
   }
   body .container #home .home-content h3 {
     line-height: 10px;
@@ -346,5 +350,9 @@ body .container #home::after {
   }
   body .container #home .home-content h3 .frontEnd {
     font-size: 45px;
+    line-height: 50px;
+  }
+  body .container #home::after {
+    opacity: 90%;
   }
 }/*# sourceMappingURL=index.css.map */

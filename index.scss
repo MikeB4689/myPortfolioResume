@@ -420,8 +420,15 @@ body {
       }
 
       #home {
+
+        #bGimage {
+
+          height: 100vh;
+        }
+
         .home-content {
           width: 600px;
+
           padding: 0;
 
           h1 {
@@ -430,6 +437,7 @@ body {
             span {
               font-size: 75px;
               line-height: 110px;
+              line-height: 90px;
             }
           }
 
@@ -439,9 +447,16 @@ body {
 
             .frontEnd {
               font-size: 45px;
+              line-height: 50px;
             }
           }
         }
+      }
+
+      #home::after {
+
+        opacity: 90%;
+
       }
     }
   }
